@@ -19,15 +19,43 @@ from env_core.grid import Grid, load_scenario
 
 _SCENARIOS_DIR = Path(__file__).parent.parent / "scenarios"
 
+_BUILTIN_DEFAULT: dict[str, Any] = {
+    "name": "two_towns",
+    "grid_width": 14, "grid_height": 14, "max_turns": 20, "actions_per_crew": 4,
+    "crews": [{"id": 0, "size": 10, "cell": [7, 0]}, {"id": 1, "size": 10, "cell": [7, 13]}],
+    "fire_clusters": [
+        {"cells": [[3, 2], [2, 3], [3, 3]], "intensity": 40},
+        {"cells": [[10, 11], [11, 10], [10, 10]], "intensity": 40},
+    ],
+    "cells": [
+        {"x": 2,  "y": 2,  "pop": 300, "property_value": 3000, "spreadability": 65},
+        {"x": 1,  "y": 2,  "pop": 50,  "property_value": 500,  "spreadability": 60},
+        {"x": 2,  "y": 1,  "pop": 50,  "property_value": 500,  "spreadability": 60},
+        {"x": 11, "y": 11, "pop": 250, "property_value": 2500, "spreadability": 65},
+        {"x": 12, "y": 11, "pop": 40,  "property_value": 400,  "spreadability": 60},
+        {"x": 11, "y": 12, "pop": 40,  "property_value": 400,  "spreadability": 60},
+    ],
+    "baseline_donothing": -582038,
+    "baseline_greedy": -464967,
+}
+
 
 def _load_named_scenario(name: str) -> dict[str, Any]:
     path = _SCENARIOS_DIR / f"{name}.json"
-    with open(path) as f:
-        return json.load(f)
+    try:
+        with open(path) as f:
+            return json.load(f)
+    except FileNotFoundError:
+        if name == "two_towns":
+            return _BUILTIN_DEFAULT
+        raise
 
 
 def _default_scenario() -> dict[str, Any]:
-    return _load_named_scenario("two_towns")
+    try:
+        return _load_named_scenario("two_towns")
+    except Exception:
+        return _BUILTIN_DEFAULT
 
 
 class TriageEnv(BaseEnv):
