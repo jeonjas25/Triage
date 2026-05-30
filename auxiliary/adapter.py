@@ -7,6 +7,11 @@ Local dev:
 """
 
 import argparse
+import sys
+from pathlib import Path
+
+# Ensure auxiliary/ is on the path when the platform runs this from the repo root.
+sys.path.insert(0, str(Path(__file__).parent))
 
 from bench_common.env_sdk import serve
 from env import TriageEnv
