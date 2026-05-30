@@ -1,0 +1,30 @@
+{
+  "name": "three_fronts",
+  "description": "Three fire fronts threatening three towns. Two crews cannot hold every line — the agent must pick which town to sacrifice.",
+  "grid_width": 18,
+  "grid_height": 18,
+  "max_turns": 25,
+  "actions_per_crew": 4,
+  "crews": [
+    {"id": 0, "size": 10, "cell": [9, 0]},
+    {"id": 1, "size": 10, "cell": [9, 17]}
+  ],
+  "fire_clusters": [
+    {"cells": [[3, 2], [2, 3], [3, 3]], "intensity": 35},
+    {"cells": [[14, 2], [15, 3], [14, 3]], "intensity": 35},
+    {"cells": [[9, 14], [8, 14], [10, 14]], "intensity": 25}
+  ],
+  "cells": [
+    {"x": 2,  "y": 2,  "pop": 400, "property_value": 4000, "spreadability": 70},
+    {"x": 1,  "y": 2,  "pop": 60,  "property_value": 600,  "spreadability": 60},
+    {"x": 2,  "y": 1,  "pop": 60,  "property_value": 600,  "spreadability": 60},
+    {"x": 15, "y": 2,  "pop": 350, "property_value": 3500, "spreadability": 70},
+    {"x": 16, "y": 2,  "pop": 50,  "property_value": 500,  "spreadability": 60},
+    {"x": 15, "y": 1,  "pop": 50,  "property_value": 500,  "spreadability": 60},
+    {"x": 9,  "y": 15, "pop": 200, "property_value": 2000, "spreadability": 60},
+    {"x": 8,  "y": 15, "pop": 30,  "property_value": 300,  "spreadability": 55},
+    {"x": 10, "y": 15, "pop": 30,  "property_value": 300,  "spreadability": 55}
+  ],
+  "baseline_donothing": -1131509,
+  "baseline_greedy": -828003
+}

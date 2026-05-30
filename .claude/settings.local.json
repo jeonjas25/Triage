@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m swecc_mesocosm --help)",
+      "Bash(python -c \"import swecc_mesocosm; print\\(swecc_mesocosm.__file__\\)\")",
+      "PowerShell(mesocosm init *)"
+    ]
+  }
+}

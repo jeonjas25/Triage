@@ -1,0 +1,30 @@
+{
+  "name": "squeeze",
+  "description": "Three fast-spreading fronts, small crews with fewer action points. The budget squeeze is hardest here — saving two of three towns is the ceiling.",
+  "grid_width": 16,
+  "grid_height": 16,
+  "max_turns": 22,
+  "actions_per_crew": 3,
+  "crews": [
+    {"id": 0, "size": 7, "cell": [8, 0]},
+    {"id": 1, "size": 7, "cell": [8, 15]}
+  ],
+  "fire_clusters": [
+    {"cells": [[2, 1], [1, 2], [2, 2]], "intensity": 45},
+    {"cells": [[13, 1], [14, 2], [13, 2]], "intensity": 45},
+    {"cells": [[8, 13], [7, 13], [9, 13]], "intensity": 30}
+  ],
+  "cells": [
+    {"x": 1,  "y": 1,  "pop": 500, "property_value": 5000, "spreadability": 75},
+    {"x": 1,  "y": 2,  "pop": 80,  "property_value": 800,  "spreadability": 65},
+    {"x": 2,  "y": 1,  "pop": 80,  "property_value": 800,  "spreadability": 65},
+    {"x": 14, "y": 1,  "pop": 450, "property_value": 4500, "spreadability": 75},
+    {"x": 14, "y": 2,  "pop": 70,  "property_value": 700,  "spreadability": 65},
+    {"x": 13, "y": 1,  "pop": 70,  "property_value": 700,  "spreadability": 65},
+    {"x": 8,  "y": 14, "pop": 250, "property_value": 2500, "spreadability": 65},
+    {"x": 7,  "y": 14, "pop": 40,  "property_value": 400,  "spreadability": 60},
+    {"x": 9,  "y": 14, "pop": 40,  "property_value": 400,  "spreadability": 60}
+  ],
+  "baseline_donothing": -1631643,
+  "baseline_greedy": -1212389
+}

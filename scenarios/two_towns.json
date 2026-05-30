@@ -1,0 +1,26 @@
+{
+  "name": "two_towns",
+  "description": "Two towns, two fire fronts igniting directly adjacent. Crews can hold one line but not both.",
+  "grid_width": 14,
+  "grid_height": 14,
+  "max_turns": 20,
+  "actions_per_crew": 4,
+  "crews": [
+    {"id": 0, "size": 10, "cell": [7, 0]},
+    {"id": 1, "size": 10, "cell": [7, 13]}
+  ],
+  "fire_clusters": [
+    {"cells": [[3, 2], [2, 3], [3, 3]], "intensity": 40},
+    {"cells": [[10, 11], [11, 10], [10, 10]], "intensity": 40}
+  ],
+  "cells": [
+    {"x": 2,  "y": 2,  "pop": 300, "property_value": 3000, "spreadability": 65},
+    {"x": 1,  "y": 2,  "pop": 50,  "property_value": 500,  "spreadability": 60},
+    {"x": 2,  "y": 1,  "pop": 50,  "property_value": 500,  "spreadability": 60},
+    {"x": 11, "y": 11, "pop": 250, "property_value": 2500, "spreadability": 65},
+    {"x": 12, "y": 11, "pop": 40,  "property_value": 400,  "spreadability": 60},
+    {"x": 11, "y": 12, "pop": 40,  "property_value": 400,  "spreadability": 60}
+  ],
+  "baseline_donothing": -582038,
+  "baseline_greedy": -464967
+}
