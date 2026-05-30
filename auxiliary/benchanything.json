@@ -38,7 +38,7 @@
     },
 
     "reward": {
-      "type": "continuous",
+      "type": "scalar",
       "range": { "low": -1.0, "high": 2.0 },
       "description": "Per-tick signed delta added to a running total, then normalized at episode end against scenario-specific do-nothing and greedy baselines. A norm_score of 0 matches doing nothing; 1.0 matches the greedy heuristic ceiling; above 1.0 means the agent beat greedy. Practical band is 0 to 1 for a competent agent."
     },
@@ -51,7 +51,7 @@
       "observability": "partial"
     },
 
-    "techniques": ["resource_allocation", "planning_under_uncertainty", "multi_objective"]
+    "techniques": []
   },
 
   "scoring": {
