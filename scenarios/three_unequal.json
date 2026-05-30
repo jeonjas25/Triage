@@ -1,0 +1,24 @@
+{
+  "name": "three_unequal",
+  "description": "Three fronts with populations 500, 150, 30. Agent must rank and commit.",
+  "grid_width": 18, "grid_height": 18, "max_turns": 22, "actions_per_crew": 4,
+  "crews": [{"id": 0, "size": 10, "cell": [9, 0]}, {"id": 1, "size": 10, "cell": [9, 17]}],
+  "fire_clusters": [
+    {"cells": [[2, 2], [3, 2], [2, 3]], "intensity": 38},
+    {"cells": [[15, 2], [14, 2], [15, 3]], "intensity": 38},
+    {"cells": [[9, 15], [8, 15], [10, 15]], "intensity": 38}
+  ],
+  "cells": [
+    {"x": 1,  "y": 1,  "pop": 500, "property_value": 5000, "spreadability": 70},
+    {"x": 1,  "y": 2,  "pop": 70,  "property_value": 700,  "spreadability": 60},
+    {"x": 2,  "y": 1,  "pop": 70,  "property_value": 700,  "spreadability": 60},
+    {"x": 16, "y": 1,  "pop": 150, "property_value": 1500, "spreadability": 65},
+    {"x": 16, "y": 2,  "pop": 20,  "property_value": 200,  "spreadability": 60},
+    {"x": 15, "y": 1,  "pop": 20,  "property_value": 200,  "spreadability": 60},
+    {"x": 9,  "y": 16, "pop": 30,  "property_value": 300,  "spreadability": 55},
+    {"x": 8,  "y": 16, "pop": 5,   "property_value": 50,   "spreadability": 50},
+    {"x": 10, "y": 16, "pop": 5,   "property_value": 50,   "spreadability": 50}
+  ],
+  "baseline_donothing": -698732,
+  "baseline_greedy": -264078
+}

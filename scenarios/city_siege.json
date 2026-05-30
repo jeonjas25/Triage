@@ -1,0 +1,21 @@
+{
+  "name": "city_siege",
+  "description": "Central city of 700 people attacked from two sides. Crews must split to hold both approaches.",
+  "grid_width": 16, "grid_height": 18, "max_turns": 22, "actions_per_crew": 4,
+  "crews": [{"id": 0, "size": 10, "cell": [8, 0]}, {"id": 1, "size": 10, "cell": [8, 17]}],
+  "fire_clusters": [
+    {"cells": [[6, 4], [7, 4], [8, 4], [7, 5]], "intensity": 35},
+    {"cells": [[6, 13], [7, 13], [8, 13], [7, 12]], "intensity": 35}
+  ],
+  "cells": [
+    {"x": 7,  "y": 8,  "pop": 700, "property_value": 7000, "spreadability": 50},
+    {"x": 6,  "y": 8,  "pop": 100, "property_value": 1000, "spreadability": 50},
+    {"x": 8,  "y": 8,  "pop": 100, "property_value": 1000, "spreadability": 50},
+    {"x": 7,  "y": 7,  "pop": 100, "property_value": 1000, "spreadability": 50},
+    {"x": 7,  "y": 9,  "pop": 100, "property_value": 1000, "spreadability": 50},
+    {"x": 7,  "y": 6,  "pop": 80,  "property_value": 800,  "spreadability": 55},
+    {"x": 7,  "y": 10, "pop": 80,  "property_value": 800,  "spreadability": 55}
+  ],
+  "baseline_donothing": -223542,
+  "baseline_greedy": 129954
+}

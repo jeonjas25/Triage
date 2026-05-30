@@ -66,6 +66,7 @@ class TriageEnv(BaseEnv):
         self._schedule: list[dict] = []
         self._burn_lifespans: dict[tuple[int, int], int] = {}
         self._active_timers: dict[tuple[int, int], int] = {}
+        self._pending_clusters: list[tuple[int, dict]] = []  # (ignite_at_turn, cluster)
         self._turn: int = 0
         self._max_turns: int = 20
         self._running_total: int = 0
@@ -88,7 +89,6 @@ class TriageEnv(BaseEnv):
         self._baseline_greedy = scenario.get("baseline_greedy", 10000)
         actions_per_crew = scenario.get("actions_per_crew", 4)
 
-        # Build crews
         self._crews = [
             Crew(
                 id=c["id"],
@@ -99,19 +99,21 @@ class TriageEnv(BaseEnv):
             for c in scenario.get("crews", [])
         ]
 
-        # Seed fire clusters
         assert self._grid is not None
+        self._pending_clusters = []
         for cluster in clusters:
-            for cx, cy in cluster["cells"]:
-                cell = self._grid.get(cx, cy)
-                if cell:
-                    cell.on_fire = True
-                    cell.intensity = cluster.get("intensity", 20)
+            ignite_at = cluster.get("ignite_at", 0)
+            if ignite_at <= 0:
+                for cx, cy in cluster["cells"]:
+                    cell = self._grid.get(cx, cy)
+                    if cell:
+                        cell.on_fire = True
+                        cell.intensity = cluster.get("intensity", 20)
+            else:
+                self._pending_clusters.append((ignite_at, cluster))
 
-        # Pre-roll the schedule
         self._schedule, self._burn_lifespans = self._preroll(rng, self._grid, self._max_turns)
 
-        # Initialize timers for cells already on fire at reset
         self._active_timers = {}
         for cell in self._grid.cells.values():
             if cell.on_fire:
@@ -129,12 +131,25 @@ class TriageEnv(BaseEnv):
     def step(self, action: Any) -> StepResult:
         assert self._grid is not None
 
-        # Apply crew commands
+        # Ignite any clusters whose turn has come
+        still_pending = []
+        for ignite_at, cluster in self._pending_clusters:
+            if self._turn >= ignite_at:
+                for cx, cy in cluster["cells"]:
+                    cell = self._grid.get(cx, cy)
+                    if cell and not cell.on_fire:
+                        cell.on_fire = True
+                        cell.intensity = cluster.get("intensity", 20)
+                        key = (cx, cy)
+                        self._active_timers[key] = self._burn_lifespans.get(key, 15)
+            else:
+                still_pending.append((ignite_at, cluster))
+        self._pending_clusters = still_pending
+
         commands = action.get("commands", []) if isinstance(action, dict) else []
         illegal = apply_commands(commands, self._crews, self._grid)
         self._illegal += illegal
 
-        # World tick
         schedule_t = self._schedule[self._turn]
         newly_ignited, prop_lost = self._fire.step(
             self._grid, schedule_t, self._active_timers, self._burn_lifespans
@@ -150,11 +165,13 @@ class TriageEnv(BaseEnv):
         self._cells_ignited += newly_ignited
         self._turn += 1
 
-        # Reset action points for next turn
         for crew in self._crews:
             crew.reset_actions()
 
-        terminated = not any(c.on_fire for c in self._grid.cells.values())
+        terminated = (
+            not any(c.on_fire for c in self._grid.cells.values())
+            and not self._pending_clusters
+        )
         truncated = self._turn >= self._max_turns
 
         info: dict[str, Any] = {}
@@ -205,10 +222,6 @@ class TriageEnv(BaseEnv):
 
     @staticmethod
     def _preroll(rng: random.Random, grid: Grid, max_turns: int) -> tuple[list[dict], dict]:
-        """
-        Returns (per-turn schedule, burn_lifespans).
-        burn_lifespans: pre-rolled lifespan for every cell — assigned when a cell first ignites.
-        """
         burn_lifespans = {(c.x, c.y): rng.randint(12, 20) for c in grid.cells.values()}
         schedule = []
         for _ in range(max_turns):

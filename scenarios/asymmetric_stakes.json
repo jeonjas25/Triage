@@ -1,0 +1,20 @@
+{
+  "name": "asymmetric_stakes",
+  "description": "Two fronts, north town has 6x the population. Priority is obvious but execution is hard.",
+  "grid_width": 14, "grid_height": 14, "max_turns": 20, "actions_per_crew": 4,
+  "crews": [{"id": 0, "size": 10, "cell": [7, 6]}, {"id": 1, "size": 8, "cell": [7, 7]}],
+  "fire_clusters": [
+    {"cells": [[2, 2], [3, 2], [2, 3]], "intensity": 38},
+    {"cells": [[11, 11], [10, 11], [11, 10]], "intensity": 38}
+  ],
+  "cells": [
+    {"x": 1,  "y": 1,  "pop": 600, "property_value": 6000, "spreadability": 65},
+    {"x": 1,  "y": 2,  "pop": 80,  "property_value": 800,  "spreadability": 60},
+    {"x": 2,  "y": 1,  "pop": 80,  "property_value": 800,  "spreadability": 60},
+    {"x": 12, "y": 12, "pop": 80,  "property_value": 800,  "spreadability": 60},
+    {"x": 12, "y": 11, "pop": 15,  "property_value": 150,  "spreadability": 55},
+    {"x": 11, "y": 12, "pop": 15,  "property_value": 150,  "spreadability": 55}
+  ],
+  "baseline_donothing": -502761,
+  "baseline_greedy": -87745
+}

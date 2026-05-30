@@ -1,0 +1,20 @@
+{
+  "name": "crescendo",
+  "description": "Fires start weak but terrain spreadability is 85. Delay costs everything.",
+  "grid_width": 14, "grid_height": 14, "max_turns": 18, "actions_per_crew": 4,
+  "crews": [{"id": 0, "size": 10, "cell": [7, 0]}, {"id": 1, "size": 8, "cell": [7, 13]}],
+  "fire_clusters": [
+    {"cells": [[3, 3], [4, 3]], "intensity": 18},
+    {"cells": [[10, 10], [9, 10]], "intensity": 18}
+  ],
+  "cells": [
+    {"x": 2,  "y": 2,  "pop": 280, "property_value": 2800, "spreadability": 85},
+    {"x": 1,  "y": 2,  "pop": 40,  "property_value": 400,  "spreadability": 82},
+    {"x": 2,  "y": 1,  "pop": 40,  "property_value": 400,  "spreadability": 82},
+    {"x": 11, "y": 11, "pop": 240, "property_value": 2400, "spreadability": 85},
+    {"x": 12, "y": 11, "pop": 35,  "property_value": 350,  "spreadability": 82},
+    {"x": 11, "y": 12, "pop": 35,  "property_value": 350,  "spreadability": 82}
+  ],
+  "baseline_donothing": -459096,
+  "baseline_greedy": -156596
+}

@@ -1,0 +1,20 @@
+{
+  "name": "racing_fronts",
+  "description": "North fire is high-intensity on dry terrain; south smolders slowly. Equal populations.",
+  "grid_width": 16, "grid_height": 12, "max_turns": 18, "actions_per_crew": 4,
+  "crews": [{"id": 0, "size": 10, "cell": [8, 6]}, {"id": 1, "size": 10, "cell": [7, 5]}],
+  "fire_clusters": [
+    {"cells": [[2, 2], [3, 2], [2, 3], [3, 3]], "intensity": 55},
+    {"cells": [[13, 8], [12, 8], [13, 7]], "intensity": 18}
+  ],
+  "cells": [
+    {"x": 1,  "y": 1,  "pop": 350, "property_value": 3500, "spreadability": 80},
+    {"x": 1,  "y": 2,  "pop": 50,  "property_value": 500,  "spreadability": 75},
+    {"x": 2,  "y": 1,  "pop": 50,  "property_value": 500,  "spreadability": 75},
+    {"x": 14, "y": 9,  "pop": 300, "property_value": 3000, "spreadability": 40},
+    {"x": 14, "y": 10, "pop": 40,  "property_value": 400,  "spreadability": 35},
+    {"x": 15, "y": 9,  "pop": 40,  "property_value": 400,  "spreadability": 35}
+  ],
+  "baseline_donothing": -438446,
+  "baseline_greedy": -224397
+}

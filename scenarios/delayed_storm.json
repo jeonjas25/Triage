@@ -1,0 +1,24 @@
+{
+  "name": "delayed_storm",
+  "description": "Two fires at start, a third ignites at turn 6. Tests dynamic crew reallocation.",
+  "grid_width": 18, "grid_height": 18, "max_turns": 25, "actions_per_crew": 4,
+  "crews": [{"id": 0, "size": 10, "cell": [9, 0]}, {"id": 1, "size": 10, "cell": [0, 9]}],
+  "fire_clusters": [
+    {"cells": [[2, 2], [3, 2], [2, 3]], "intensity": 35},
+    {"cells": [[15, 15], [14, 15], [15, 14]], "intensity": 35},
+    {"cells": [[15, 2], [14, 2], [15, 3]], "intensity": 40, "ignite_at": 6}
+  ],
+  "cells": [
+    {"x": 1,  "y": 1,  "pop": 350, "property_value": 3500, "spreadability": 65},
+    {"x": 1,  "y": 2,  "pop": 50,  "property_value": 500,  "spreadability": 60},
+    {"x": 2,  "y": 1,  "pop": 50,  "property_value": 500,  "spreadability": 60},
+    {"x": 16, "y": 16, "pop": 300, "property_value": 3000, "spreadability": 65},
+    {"x": 16, "y": 15, "pop": 40,  "property_value": 400,  "spreadability": 60},
+    {"x": 15, "y": 16, "pop": 40,  "property_value": 400,  "spreadability": 60},
+    {"x": 16, "y": 1,  "pop": 280, "property_value": 2800, "spreadability": 68},
+    {"x": 16, "y": 2,  "pop": 40,  "property_value": 400,  "spreadability": 62},
+    {"x": 17, "y": 1,  "pop": 40,  "property_value": 400,  "spreadability": 62}
+  ],
+  "baseline_donothing": -577265,
+  "baseline_greedy": -216687
+}

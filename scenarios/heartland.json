@@ -1,0 +1,21 @@
+{
+  "name": "heartland",
+  "description": "800-person metro at center, two fires converging from the northwest and east.",
+  "grid_width": 20, "grid_height": 20, "max_turns": 25, "actions_per_crew": 4,
+  "crews": [{"id": 0, "size": 12, "cell": [10, 0]}, {"id": 1, "size": 12, "cell": [0, 10]}],
+  "fire_clusters": [
+    {"cells": [[3, 7], [3, 8], [4, 7]], "intensity": 40},
+    {"cells": [[14, 10], [15, 10], [14, 9]], "intensity": 38}
+  ],
+  "cells": [
+    {"x": 9,  "y": 9,  "pop": 800, "property_value": 8000, "spreadability": 45},
+    {"x": 8,  "y": 9,  "pop": 100, "property_value": 1000, "spreadability": 50},
+    {"x": 10, "y": 9,  "pop": 100, "property_value": 1000, "spreadability": 50},
+    {"x": 9,  "y": 8,  "pop": 100, "property_value": 1000, "spreadability": 50},
+    {"x": 9,  "y": 10, "pop": 100, "property_value": 1000, "spreadability": 50},
+    {"x": 6,  "y": 8,  "pop": 150, "property_value": 1500, "spreadability": 55},
+    {"x": 12, "y": 9,  "pop": 130, "property_value": 1300, "spreadability": 55}
+  ],
+  "baseline_donothing": -31798,
+  "baseline_greedy": 263272
+}

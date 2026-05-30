@@ -1,0 +1,20 @@
+{
+  "name": "one_crew",
+  "description": "Single large crew, two equal fire fronts. Must pick one and commit.",
+  "grid_width": 12, "grid_height": 12, "max_turns": 20, "actions_per_crew": 5,
+  "crews": [{"id": 0, "size": 15, "cell": [6, 6]}],
+  "fire_clusters": [
+    {"cells": [[2, 2], [3, 2], [2, 3]], "intensity": 40},
+    {"cells": [[9, 9], [8, 9], [9, 8]], "intensity": 40}
+  ],
+  "cells": [
+    {"x": 1,  "y": 1,  "pop": 300, "property_value": 3000, "spreadability": 65},
+    {"x": 1,  "y": 2,  "pop": 50,  "property_value": 500,  "spreadability": 60},
+    {"x": 2,  "y": 1,  "pop": 50,  "property_value": 500,  "spreadability": 60},
+    {"x": 10, "y": 10, "pop": 250, "property_value": 2500, "spreadability": 65},
+    {"x": 10, "y": 9,  "pop": 40,  "property_value": 400,  "spreadability": 60},
+    {"x": 9,  "y": 10, "pop": 40,  "property_value": 400,  "spreadability": 60}
+  ],
+  "baseline_donothing": -332489,
+  "baseline_greedy": -274436
+}

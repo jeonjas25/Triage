@@ -1,0 +1,26 @@
+{
+  "name": "four_villages",
+  "description": "Four villages, two diagonal fires. Crews can save two; which two?",
+  "grid_width": 18, "grid_height": 18, "max_turns": 22, "actions_per_crew": 4,
+  "crews": [{"id": 0, "size": 10, "cell": [9, 9]}, {"id": 1, "size": 10, "cell": [9, 8]}],
+  "fire_clusters": [
+    {"cells": [[4, 4], [5, 4], [4, 5]], "intensity": 40},
+    {"cells": [[13, 13], [12, 13], [13, 12]], "intensity": 40}
+  ],
+  "cells": [
+    {"x": 2,  "y": 2,  "pop": 220, "property_value": 2200, "spreadability": 65},
+    {"x": 2,  "y": 3,  "pop": 30,  "property_value": 300,  "spreadability": 60},
+    {"x": 3,  "y": 2,  "pop": 30,  "property_value": 300,  "spreadability": 60},
+    {"x": 15, "y": 2,  "pop": 190, "property_value": 1900, "spreadability": 65},
+    {"x": 15, "y": 3,  "pop": 25,  "property_value": 250,  "spreadability": 60},
+    {"x": 14, "y": 2,  "pop": 25,  "property_value": 250,  "spreadability": 60},
+    {"x": 2,  "y": 15, "pop": 170, "property_value": 1700, "spreadability": 65},
+    {"x": 2,  "y": 14, "pop": 25,  "property_value": 250,  "spreadability": 60},
+    {"x": 3,  "y": 15, "pop": 25,  "property_value": 250,  "spreadability": 60},
+    {"x": 15, "y": 15, "pop": 150, "property_value": 1500, "spreadability": 65},
+    {"x": 15, "y": 14, "pop": 20,  "property_value": 200,  "spreadability": 60},
+    {"x": 14, "y": 15, "pop": 20,  "property_value": 200,  "spreadability": 60}
+  ],
+  "baseline_donothing": 29849,
+  "baseline_greedy": 84809
+}

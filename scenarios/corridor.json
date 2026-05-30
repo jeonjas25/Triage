@@ -1,0 +1,24 @@
+{
+  "name": "corridor",
+  "description": "Three towns along a 20x8 corridor with fires at both ends and the middle.",
+  "grid_width": 20, "grid_height": 8, "max_turns": 20, "actions_per_crew": 4,
+  "crews": [{"id": 0, "size": 10, "cell": [10, 4]}, {"id": 1, "size": 10, "cell": [10, 3]}],
+  "fire_clusters": [
+    {"cells": [[2, 3], [2, 4], [3, 3]], "intensity": 40},
+    {"cells": [[10, 1], [11, 1], [10, 0]], "intensity": 30},
+    {"cells": [[17, 3], [17, 4], [18, 3]], "intensity": 38}
+  ],
+  "cells": [
+    {"x": 1,  "y": 3,  "pop": 350, "property_value": 3500, "spreadability": 65},
+    {"x": 1,  "y": 4,  "pop": 50,  "property_value": 500,  "spreadability": 60},
+    {"x": 0,  "y": 3,  "pop": 50,  "property_value": 500,  "spreadability": 60},
+    {"x": 10, "y": 2,  "pop": 200, "property_value": 2000, "spreadability": 55},
+    {"x": 11, "y": 2,  "pop": 30,  "property_value": 300,  "spreadability": 50},
+    {"x": 9,  "y": 2,  "pop": 30,  "property_value": 300,  "spreadability": 50},
+    {"x": 18, "y": 4,  "pop": 280, "property_value": 2800, "spreadability": 65},
+    {"x": 19, "y": 4,  "pop": 40,  "property_value": 400,  "spreadability": 60},
+    {"x": 18, "y": 3,  "pop": 40,  "property_value": 400,  "spreadability": 60}
+  ],
+  "baseline_donothing": -862346,
+  "baseline_greedy": -641063
+}
