@@ -1,49 +1,92 @@
 {
-  "id": "my-env",
+  "id": "triage-wildfire",
   "adapter": "adapter.py",
-  "name": "My Environment",
-  "description": "One-sentence description of what this benchmark evaluates.",
+  "name": "Triage",
+  "description": "Direct firefighting crews across competing fire fronts under a strict action budget, saving as many lives as possible when there are never enough crews to hold every line.",
 
   "binding_vow": {
     "version": "1.0.0",
     "tier": "tier1",
-    "description": "Longer description of the task and what makes a good agent.",
+    "description": "A grid-based wildfire simulation. Several fire fronts ignite simultaneously across a map, each threatening a different population center. Each turn the agent commands every crew, spending a fixed pool of action points per crew on moving, suppressing fire, prepping firebreaks, and evacuating people. Crews are few and action points are scarce, so the agent must choose which fronts to hold and which to let burn. The benchmark measures how well a model triages scarce responders across competing fronts under that pressure.",
 
     "observation_space": {
       "type": "json",
-      "description": "{ \"question\": string }"
+      "description": "JSON object with fields: turn (int), max_turns (int), grid_width (int), grid_height (int), score (int, running score so far), crews (array of {id, size, cell:[x,y], actions_remaining}), cells (array of decision-relevant cells only: {x, y, pop, on_fire, intensity 0-100, spreadability 0-100, property_value, property_remaining}). Only cells on fire, adjacent to fire, holding population, or holding a crew are included. The agent always receives full grid dimensions."
     },
 
     "action_space": {
-      "type": "text",
-      "description": "Free-text answer from the agent"
+      "type": "json",
+      "description": "JSON object with a single key 'commands': an array of crew commands. Each command is an object with 'crew' (crew id int) and 'action' (one of 'move', 'suppress', 'prep', 'evacuate'). Move and evacuate also require 'to': [x, y] for the destination cell. Commands are processed in listed order; each costs 1 action point from that crew's pool. Illegal commands (non-adjacent move, suppressing a cell the crew is not on, exceeding action points, unknown crew id) are silently rejected and counted. Example: {\"commands\": [{\"crew\": 0, \"action\": \"move\", \"to\": [5, 5]}, {\"crew\": 0, \"action\": \"suppress\"}, {\"crew\": 1, \"action\": \"evacuate\", \"to\": [8, 9]}, {\"crew\": 1, \"action\": \"prep\"}]}",
+      "schema": {
+        "type": "object",
+        "required": ["commands"],
+        "properties": {
+          "commands": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["crew", "action"],
+              "properties": {
+                "crew":   { "type": "integer" },
+                "action": { "type": "string", "enum": ["move", "suppress", "prep", "evacuate"] },
+                "to":     { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 }
+              }
+            }
+          }
+        }
+      }
     },
 
     "reward": {
-      "type": "binary",
-      "range": { "low": 0.0, "high": 1.0 },
-      "description": "1.0 if correct, 0.0 otherwise"
+      "type": "continuous",
+      "range": { "low": -1.0, "high": 2.0 },
+      "description": "Per-tick signed delta added to a running total, then normalized at episode end against scenario-specific do-nothing and greedy baselines. A norm_score of 0 matches doing nothing; 1.0 matches the greedy heuristic ceiling; above 1.0 means the agent beat greedy. Practical band is 0 to 1 for a competent agent."
     },
 
     "episode": {
-      "max_steps": 10,
+      "max_steps": 25,
       "deterministic_reset": true,
       "supports_seed": true,
       "parallel_episodes": 1,
-      "observability": "full"
+      "observability": "partial"
     },
 
-    "techniques": []
+    "techniques": ["resource_allocation", "planning_under_uncertainty", "multi_objective"]
   },
 
   "scoring": {
-    "primary_metric": "accuracy",
+    "primary_metric": "rescue_score",
     "higher_is_better": true,
     "metrics": [
       {
-        "name": "accuracy",
-        "type": "episode_reward",
-        "aggregation": "pass_rate"
+        "name": "rescue_score",
+        "type": "terminal_field",
+        "field": "norm_score",
+        "aggregation": "mean"
+      },
+      {
+        "name": "lives_lost",
+        "type": "terminal_field",
+        "field": "lives_lost",
+        "aggregation": "mean"
+      },
+      {
+        "name": "property_lost",
+        "type": "terminal_field",
+        "field": "property_lost",
+        "aggregation": "mean"
+      },
+      {
+        "name": "cells_burned",
+        "type": "terminal_field",
+        "field": "cells_burned",
+        "aggregation": "mean"
+      },
+      {
+        "name": "illegal_rate",
+        "type": "terminal_field",
+        "field": "illegal_actions",
+        "aggregation": "mean"
       }
     ]
   }
