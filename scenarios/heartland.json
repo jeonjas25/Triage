@@ -3,7 +3,7 @@
   "description": "800-person metro at center, two fires converging from the northwest and east.",
   "grid_width": 36,
   "grid_height": 36,
-  "max_turns": 25,
+  "max_turns": 100,
   "actions_per_crew": 6,
   "crews": [
     {
@@ -2241,6 +2241,6 @@
       "spreadability": 39
     }
   ],
-  "baseline_donothing": 23451482,
-  "baseline_greedy": 26993552
+  "baseline_donothing": 16775631,
+  "baseline_greedy": 58001203
 }

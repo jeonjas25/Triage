@@ -2225,6 +2225,6 @@
       "spreadability": 65
     }
   ],
-  "baseline_donothing": 3517616,
-  "baseline_greedy": 3942048
+  "baseline_donothing": 3704372,
+  "baseline_greedy": 3835810
 }

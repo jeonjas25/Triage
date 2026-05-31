@@ -3,7 +3,20 @@
     "allow": [
       "Bash(python -m swecc_mesocosm --help)",
       "Bash(python -c \"import swecc_mesocosm; print\\(swecc_mesocosm.__file__\\)\")",
-      "PowerShell(mesocosm init *)"
+      "PowerShell(mesocosm init *)",
+      "Bash(pip show *)",
+      "Bash(pip list *)",
+      "Bash(python *)",
+      "WebFetch(domain:wiki.swecc.org)",
+      "Bash(curl -s http://localhost:8765/health)",
+      "Bash(kill %1)",
+      "Bash(pip install *)",
+      "Bash(mesocosm --help)",
+      "Bash(mesocosm run *)",
+      "Bash(python -m http.server 8080)",
+      "Bash(echo \"Server PID: $!\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/)",
+      "Bash(curl *)"
     ]
   }
 }

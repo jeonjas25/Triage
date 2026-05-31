@@ -17,6 +17,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent / "auxiliary"))
 
+try:
+    import bench_common  # real swecc-mesocosm SDK
+except ImportError:
+    # Fall back to local stub so run_local.py works without the SDK installed
+    sys.path.insert(0, str(Path(__file__).parent / "_local_stubs"))
+
 from env import TriageEnv  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).parent))

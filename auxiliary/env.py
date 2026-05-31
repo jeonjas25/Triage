@@ -77,6 +77,7 @@ class TriageEnv(BaseEnv):
         self._baseline_donothing: int = 0
         self._baseline_greedy: int = 1
         self._scenario: dict[str, Any] = _default_scenario()
+        self._next_crew_id: list[int] = [0]  # mutable box so apply_commands can increment
 
     def reset(self, seed: int | None = None, **params: Any) -> dict[str, Any]:
         rng = random.Random(seed)
@@ -98,6 +99,7 @@ class TriageEnv(BaseEnv):
             )
             for c in scenario.get("crews", [])
         ]
+        self._next_crew_id = [max((c["id"] for c in scenario.get("crews", [])), default=-1) + 1]
 
         assert self._grid is not None
         self._pending_clusters = []
@@ -147,7 +149,8 @@ class TriageEnv(BaseEnv):
         self._pending_clusters = still_pending
 
         commands = action.get("commands", []) if isinstance(action, dict) else []
-        illegal = apply_commands(commands, self._crews, self._grid)
+        illegal, new_crews = apply_commands(commands, self._crews, self._grid, self._next_crew_id)
+        self._crews.extend(new_crews)
         self._illegal += illegal
 
         schedule_t = self._schedule[self._turn]
@@ -198,26 +201,42 @@ class TriageEnv(BaseEnv):
     def _observation(self) -> dict[str, Any]:
         assert self._grid is not None
         relevant = self._grid.observation_cells(self._crews)
+
+        cells = []
+        for cell in relevant:
+            c: dict[str, Any] = {"x": cell.x, "y": cell.y}
+            if cell.on_fire:
+                c["fire"] = 1
+                c["intensity"] = cell.intensity
+            if cell.spreadability != 50:   # 50 is the grid default; omit noise
+                c["spread"] = cell.spreadability
+            if cell.pop:
+                c["pop"] = cell.pop
+            if cell.property_remaining:
+                c["prop"] = cell.property_remaining
+            cells.append(c)
+
         return {
+            "task": (
+                "You command fire crews fighting a wildfire. "
+                "Respond with ONLY a JSON object — no explanation, no markdown. "
+                "Move crews toward fire, suppress burning cells, evacuate people, prep firebreaks. "
+                "Spend every action point."
+            ),
+            "format": (
+                '{"commands":['
+                '{"crew":0,"action":"move","to":[x,y]},'
+                '{"crew":0,"action":"suppress"},'
+                '{"crew":1,"action":"evacuate","to":[x,y]},'
+                '{"crew":1,"action":"prep"}'
+                ']}'
+            ),
             "turn": self._turn,
-            "max_turns": self._max_turns,
-            "grid_width": self._grid.width,
-            "grid_height": self._grid.height,
+            "turns_left": self._max_turns - self._turn,
+            "grid": [self._grid.width, self._grid.height],
             "score": self._running_total,
             "crews": [c.to_obs() for c in self._crews],
-            "cells": [
-                {
-                    "x": cell.x,
-                    "y": cell.y,
-                    "pop": cell.pop,
-                    "on_fire": cell.on_fire,
-                    "intensity": cell.intensity,
-                    "spreadability": cell.spreadability,
-                    "property_value": cell.property_value,
-                    "property_remaining": cell.property_remaining,
-                }
-                for cell in relevant
-            ],
+            "cells": cells,
         }
 
     @staticmethod

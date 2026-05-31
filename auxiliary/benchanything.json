@@ -11,12 +11,12 @@
 
     "observation_space": {
       "type": "json",
-      "description": "JSON object with fields: turn (int), max_turns (int), grid_width (int), grid_height (int), score (int, running score so far), crews (array of {id, size, cell:[x,y], actions_remaining}), cells (array of decision-relevant cells only: {x, y, pop, on_fire, intensity 0-100, spreadability 0-100, property_value, property_remaining}). Only cells on fire, adjacent to fire, holding population, or holding a crew are included. The agent always receives full grid dimensions."
+      "description": "JSON object with fields: task (string instruction), format (example command JSON), turn (int), turns_left (int), grid ([width, height]), score (int running total), crews (array of {id, size, cell:[x,y], actions_remaining}), cells (sparse array of decision-relevant cells only). Each cell has x, y and optional fields: fire:1 (omitted when not burning), intensity (0-100, only when fire), spread (spreadability 0-100, omitted if default 50), pop (population, omitted if 0), prop (property remaining, omitted if 0). Only cells on fire, adjacent to fire, holding population, or holding a crew are included."
     },
 
     "action_space": {
       "type": "json",
-      "description": "JSON object with a single key 'commands': an array of crew commands. Each command is an object with 'crew' (crew id int) and 'action' (one of 'move', 'suppress', 'prep', 'evacuate'). Move and evacuate also require 'to': [x, y] for the destination cell. Commands are processed in listed order; each costs 1 action point from that crew's pool. Illegal commands (non-adjacent move, suppressing a cell the crew is not on, exceeding action points, unknown crew id) are silently rejected and counted. Example: {\"commands\": [{\"crew\": 0, \"action\": \"move\", \"to\": [5, 5]}, {\"crew\": 0, \"action\": \"suppress\"}, {\"crew\": 1, \"action\": \"evacuate\", \"to\": [8, 9]}, {\"crew\": 1, \"action\": \"prep\"}]}",
+      "description": "JSON object with a single key 'commands': an array of crew commands. Each command is an object with 'crew' (crew id int) and 'action' (one of 'move', 'suppress', 'prep', 'evacuate', 'split'). Move and evacuate also require 'to': [x, y] for the destination cell. Split requires 'size': N (integer, 0 < N < crew.size) and spawns a new independent crew at the same cell with N members; the parent loses those members. The new crew is visible in the next observation with a fresh id and full action points. Commands are processed in listed order; each costs 1 action point from that crew's pool. Illegal commands (non-adjacent move, suppressing a non-burning cell, split size out of range, exceeding action points, unknown crew id) are silently rejected and counted. Evacuated people accumulate at the destination cell — ferry people multiple steps to reach safety. Example: {\"commands\": [{\"crew\": 0, \"action\": \"move\", \"to\": [5, 5]}, {\"crew\": 0, \"action\": \"suppress\"}, {\"crew\": 1, \"action\": \"evacuate\", \"to\": [8, 9]}, {\"crew\": 1, \"action\": \"split\", \"size\": 5}]}",
       "schema": {
         "type": "object",
         "required": ["commands"],
@@ -28,8 +28,9 @@
               "required": ["crew", "action"],
               "properties": {
                 "crew":   { "type": "integer" },
-                "action": { "type": "string", "enum": ["move", "suppress", "prep", "evacuate"] },
-                "to":     { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 }
+                "action": { "type": "string", "enum": ["move", "suppress", "prep", "evacuate", "split"] },
+                "to":     { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 },
+                "size":   { "type": "integer", "minimum": 1 }
               }
             }
           }

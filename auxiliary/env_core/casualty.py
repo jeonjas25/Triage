@@ -10,14 +10,20 @@ if TYPE_CHECKING:
 
 def compute_tick_casualties(grid: "Grid") -> int:
     """
-    Per burning cell: casualties scale with intensity and unevacuated pop.
-    Pop on a cell driven to intensity 0 this tick is already safe (intensity==0, on_fire==False).
+    Per burning cell: a fraction of the remaining population dies based on intensity.
+    Casualties are removed from cell.pop so deaths can't exceed total population.
+
+    Rate: ~5% of remaining pop per turn at intensity 100.
+    At intensity 50 that's ~2.5%, at intensity 20 that's ~1%.
     """
     total = 0
     for cell in grid.cells.values():
         if cell.on_fire and cell.pop > 0:
-            share = cell.intensity / 100.0
-            total += round(cell.pop * share)
+            rate = (cell.intensity / 100.0) * 0.05
+            killed = max(1, round(cell.pop * rate))
+            killed = min(killed, cell.pop)
+            cell.pop -= killed
+            total += killed
     return total
 
 

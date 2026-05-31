@@ -7,217 +7,405 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --bg: #060612;
+      --surface: #0c0c20;
+      --surface2: #10102a;
+      --border: #1a1a38;
+      --border2: #252548;
+      --text: #b0b0d8;
+      --text-dim: #44447a;
+      --text-bright: #e8e8ff;
+      --accent: #5566ff;
+      --danger: #ff4444;
+      --good: #33ff88;
+      --warn: #ffcc44;
+    }
+
     body {
-      background: #0a0a14;
-      color: #c8c8e0;
+      background: var(--bg);
+      color: var(--text);
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      font-size: 14px;
+      font-size: 13px;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 16px;
-      gap: 12px;
-    }
-
-    #header { text-align: center; }
-    #header h1 { font-size: 22px; font-weight: 700; color: #e8e8ff; letter-spacing: 0.05em; }
-    #meta-line { color: #5858a0; font-size: 12px; margin-top: 4px; font-family: monospace; }
-
-    #main-layout { display: flex; gap: 16px; align-items: flex-start; }
-
-    #canvas-wrap {
-      background: #0a0a14;
-      border: 1px solid #2a2a45;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    #grid-canvas { display: block; }
-
-    #stats-panel {
-      width: 210px;
-      background: #141428;
-      border: 1px solid #2a2a45;
-      border-radius: 8px;
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
+      padding: 18px 16px;
       gap: 10px;
+    }
+
+    /* ── Header ─────────────────────────────────────── */
+    #header {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #brand { display: flex; align-items: center; gap: 10px; }
+
+    #brand-icon { font-size: 26px; line-height: 1; }
+
+    #brand-text h1 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text-bright);
+      letter-spacing: 0.1em;
+    }
+
+    #brand-text p {
+      font-size: 9px;
+      color: var(--text-dim);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    #meta-line {
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 10px;
+    }
+
+    /* ── Main layout ─────────────────────────────────── */
+    #main-layout {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    /* ── Canvas ──────────────────────────────────────── */
+    #canvas-wrap {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
       flex-shrink: 0;
     }
 
-    .stat-block { display: flex; flex-direction: column; gap: 1px; }
-    .stat-label { font-size: 9px; letter-spacing: 0.14em; color: #5050a0; text-transform: uppercase; }
-    .stat-value { font-size: 22px; font-family: monospace; font-weight: 700; color: #e0e0ff; }
-    .stat-value.danger { color: #ff6060; }
-    .stat-value.good { color: #44ff88; }
-    .stat-value.warn  { color: #ffcc44; }
+    #grid-canvas { display: block; width: 530px; height: 530px; }
 
-    hr.divider { border: none; border-top: 1px solid #2a2a45; }
+    #tooltip {
+      position: fixed;
+      background: rgba(8, 8, 20, 0.96);
+      border: 1px solid var(--border2);
+      border-radius: 6px;
+      padding: 8px 11px;
+      font-size: 11px;
+      font-family: monospace;
+      color: var(--text);
+      pointer-events: none;
+      display: none;
+      z-index: 200;
+      line-height: 1.8;
+      white-space: nowrap;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.6);
+    }
 
-    .legend-title { font-size: 9px; letter-spacing: 0.14em; color: #5050a0; text-transform: uppercase; margin-bottom: 6px; }
-    .legend-item { display: flex; align-items: center; gap: 8px; font-size: 11px; margin-bottom: 3px; color: #a0a0c0; }
-    .legend-swatch { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
-    .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+    /* ── Stats panel ─────────────────────────────────── */
+    #stats-panel {
+      width: 250px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
 
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
+    .stat-label {
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .stat-value {
+      font-family: monospace;
+      font-weight: 700;
+      color: var(--text-bright);
+      line-height: 1;
+    }
+
+    .sv-lg { font-size: 28px; }
+    .sv-md { font-size: 20px; }
+    .sv-sm { font-size: 16px; }
+
+    .stat-value.danger { color: var(--danger); }
+    .stat-value.good   { color: var(--good); }
+    .stat-value.warn   { color: var(--warn); }
+
+    .stat-sub {
+      font-size: 10px;
+      color: var(--text-dim);
+      margin-top: 3px;
+      font-family: monospace;
+    }
+
+    .stat-row { display: flex; gap: 8px; }
+    .stat-row .card { flex: 1; min-width: 0; }
+
+    /* sparkline */
+    #sparkline-canvas { display: block; width: 100%; height: 46px; margin-top: 5px; }
+
+    /* legend */
+    .legend-title {
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      margin-bottom: 5px;
+      color: #8888b8;
+    }
+
+    .ls { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+    .ld { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+    /* ── Controls ────────────────────────────────────── */
     #controls {
       display: flex;
       align-items: center;
       gap: 8px;
-      background: #141428;
-      border: 1px solid #2a2a45;
-      border-radius: 8px;
-      padding: 10px 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 9px 12px;
       width: 100%;
-      max-width: 738px;
+      max-width: 800px;
     }
 
     .ctrl-btn {
-      background: #222240;
-      border: 1px solid #3a3a60;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
       border-radius: 6px;
-      color: #e0e0ff;
+      color: var(--text-bright);
       cursor: pointer;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1;
-      padding: 6px 9px;
-      transition: background 0.1s;
+      padding: 7px 10px;
+      transition: background 0.1s, border-color 0.12s;
       flex-shrink: 0;
     }
-    .ctrl-btn:hover { background: #3a3a60; }
-    .ctrl-btn:disabled { opacity: 0.25; cursor: default; }
+
+    .ctrl-btn:hover { background: #1c1c44; border-color: var(--accent); }
+    .ctrl-btn:disabled { opacity: 0.2; cursor: default; }
+    .ctrl-btn.active { background: #1a2060; border-color: var(--accent); color: #aabbff; }
 
     #progress-wrap { flex: 1; display: flex; flex-direction: column; gap: 4px; }
 
     #progress-bar-outer {
-      height: 6px;
-      background: #222240;
-      border-radius: 3px;
+      height: 8px;
+      background: var(--surface2);
+      border-radius: 4px;
       cursor: pointer;
       position: relative;
+      border: 1px solid var(--border);
     }
+
     #progress-bar-fill {
       height: 100%;
-      background: #4466ff;
-      border-radius: 3px;
+      background: linear-gradient(90deg, #3344cc, #6677ff);
+      border-radius: 4px;
       width: 0%;
       pointer-events: none;
-      transition: width 0.1s;
     }
-    #turn-label { font-family: monospace; font-size: 10px; color: #5858a0; text-align: center; }
 
-    .speed-wrap { display: flex; align-items: center; gap: 5px; font-size: 10px; color: #5858a0; flex-shrink: 0; }
-    #speed-slider { width: 56px; accent-color: #4466ff; cursor: pointer; }
+    #turn-label { font-family: monospace; font-size: 10px; color: var(--text-dim); text-align: center; }
+
+    .speed-wrap { display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--text-dim); flex-shrink: 0; }
+    #speed-slider { width: 56px; accent-color: var(--accent); cursor: pointer; }
 
     #load-btn {
-      background: #222240;
-      border: 1px solid #3a3a60;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
       border-radius: 6px;
-      color: #8080b0;
+      color: var(--text-dim);
       cursor: pointer;
       font-size: 11px;
-      padding: 6px 10px;
+      padding: 7px 12px;
       flex-shrink: 0;
+      transition: background 0.1s, color 0.1s;
     }
-    #load-btn:hover { background: #3a3a60; }
+
+    #load-btn:hover { background: #1c1c44; color: var(--text); }
     #file-input { display: none; }
 
+    #kbd-hint { font-size: 10px; color: var(--text-dim); opacity: 0.6; flex-shrink: 0; }
+    kbd {
+      display: inline-block;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      border-radius: 3px;
+      padding: 0 4px;
+      font-size: 9px;
+      font-family: monospace;
+    }
+
+    /* ── Timeline ────────────────────────────────────── */
+    #timeline-section {
+      width: 100%;
+      max-width: 800px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 13px;
+    }
+
+    #timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 7px;
+    }
+
+    .section-label { font-size: 9px; letter-spacing: 0.16em; color: var(--text-dim); text-transform: uppercase; }
+
+    #timeline-canvas { display: block; width: 100%; height: 62px; cursor: pointer; }
+
+    /* ── Action log ──────────────────────────────────── */
     #action-log {
       width: 100%;
-      max-width: 738px;
-      background: #141428;
-      border: 1px solid #2a2a45;
-      border-radius: 8px;
-      padding: 10px 14px;
-      font-family: monospace;
-      font-size: 11px;
-      min-height: 54px;
+      max-width: 800px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 13px;
     }
-    #log-header { color: #5050a0; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 5px; }
-    #log-content { color: #8899cc; line-height: 1.7; }
+
+    #log-header { font-size: 9px; letter-spacing: 0.16em; color: var(--text-dim); text-transform: uppercase; margin-bottom: 8px; }
+
+    #log-content { display: flex; flex-direction: column; gap: 5px; }
+
+    .crew-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+
+    .crew-label {
+      font-size: 10px;
+      font-weight: 700;
+      font-family: monospace;
+      padding: 2px 7px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .cmd-chip {
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-family: monospace;
+    }
+
+    .cmd-move     { background: rgba(66,110,255,0.15); color: #88aaff; border: 1px solid rgba(66,110,255,0.28); }
+    .cmd-suppress { background: rgba(255,100,0,0.15);  color: #ff9944; border: 1px solid rgba(255,100,0,0.28); }
+    .cmd-prep     { background: rgba(60,210,100,0.15); color: #66ee88; border: 1px solid rgba(60,210,100,0.28); }
+    .cmd-evacuate { background: rgba(255,220,50,0.15); color: #ffee66; border: 1px solid rgba(255,220,50,0.28); }
   </style>
 </head>
 <body>
 
 <div id="header">
-  <h1>&#x1F525; Triage &mdash; Wildfire Resource Allocation</h1>
-  <div id="meta-line">SWECCATHON 2026 &middot; mesocosm benchmark</div>
+  <div id="brand">
+    <span id="brand-icon">&#x1F525;</span>
+    <div id="brand-text">
+      <h1>TRIAGE</h1>
+      <p>Wildfire Resource Allocation Benchmark &nbsp;&middot;&nbsp; SWECCATHON 2026</p>
+    </div>
+  </div>
+  <div id="meta-line">Load a replay to begin</div>
 </div>
 
 <div id="main-layout">
   <div id="canvas-wrap">
-    <canvas id="grid-canvas" width="500" height="500"></canvas>
+    <canvas id="grid-canvas"></canvas>
   </div>
 
   <div id="stats-panel">
-    <div class="stat-block">
-      <div class="stat-label">Turn</div>
-      <div class="stat-value" id="stat-turn">&mdash;</div>
+    <div class="stat-row">
+      <div class="card">
+        <div class="stat-label">Turn</div>
+        <div class="stat-value sv-lg" id="stat-turn">&mdash;</div>
+      </div>
+      <div class="card">
+        <div class="stat-label">Of</div>
+        <div class="stat-value sv-lg" id="stat-max">&mdash;</div>
+      </div>
     </div>
-    <div class="stat-block">
-      <div class="stat-label">Score</div>
-      <div class="stat-value" id="stat-score">&mdash;</div>
+
+    <div class="card">
+      <div class="stat-label">Raw Score</div>
+      <div class="stat-value sv-sm" id="stat-score">&mdash;</div>
     </div>
-    <div class="stat-block">
-      <div class="stat-label">Lives Lost</div>
-      <div class="stat-value danger" id="stat-lives">&mdash;</div>
-    </div>
-    <div class="stat-block">
-      <div class="stat-label">Cells Burned</div>
-      <div class="stat-value danger" id="stat-cells">&mdash;</div>
-    </div>
-    <div class="stat-block">
+
+    <div class="card">
       <div class="stat-label">Norm Score</div>
-      <div class="stat-value" id="stat-norm">&mdash;</div>
+      <div class="stat-value sv-md" id="stat-norm">&mdash;</div>
+      <div class="stat-sub" id="stat-norm-sub">vs greedy baseline</div>
     </div>
 
-    <hr class="divider">
+    <div class="stat-row">
+      <div class="card">
+        <div class="stat-label">Lives Lost</div>
+        <div class="stat-value sv-md danger" id="stat-lives">&mdash;</div>
+      </div>
+      <div class="card">
+        <div class="stat-label">Burned</div>
+        <div class="stat-value sv-md danger" id="stat-cells">&mdash;</div>
+      </div>
+    </div>
 
-    <div>
+    <div class="card">
+      <div class="stat-label">Score Trend</div>
+      <canvas id="sparkline-canvas"></canvas>
+    </div>
+
+    <div class="card">
       <div class="legend-title">Legend</div>
-      <div class="legend-item">
-        <div class="legend-swatch" style="background:#1a3870"></div>
-        <span>Population</span>
-      </div>
-      <div class="legend-item">
-        <div class="legend-swatch" style="background:#ff9900"></div>
-        <span>Fire (low)</span>
-      </div>
-      <div class="legend-item">
-        <div class="legend-swatch" style="background:#ff1100"></div>
-        <span>Fire (high)</span>
-      </div>
-      <div class="legend-item">
-        <div class="legend-swatch" style="background:#ff1100; outline: 2px solid #ff9900; outline-offset: 1px;"></div>
-        <span>Pop + fire</span>
-      </div>
-      <div class="legend-item">
-        <div class="legend-dot" style="background:#00ff88"></div>
-        <span>Crew 0</span>
-      </div>
-      <div class="legend-item">
-        <div class="legend-dot" style="background:#00ccff"></div>
-        <span>Crew 1</span>
-      </div>
-      <div class="legend-item">
-        <div class="legend-dot" style="background:#ffff00"></div>
-        <span>Crew 2</span>
+      <div class="legend-item"><div class="ls" style="background:#0e0e1e;border:1px solid #1a1a30"></div><span>Empty terrain</span></div>
+      <div class="legend-item"><div class="ls" style="background:#182a6a"></div><span>Population (density)</span></div>
+      <div class="legend-item"><div class="ls" style="background:#ff8800"></div><span>Fire (low intensity)</span></div>
+      <div class="legend-item"><div class="ls" style="background:#ff1100;box-shadow:0 0 6px #ff1100"></div><span>Fire (high intensity)</span></div>
+      <div class="legend-item"><div class="ls" style="background:#ffee22;box-shadow:0 0 6px #ffee22"></div><span>Newly ignited</span></div>
+      <div class="legend-item"><div class="ls" style="background:#1a0e04"></div><span>Burned out</span></div>
+      <div style="margin-top:8px;border-top:1px solid var(--border);padding-top:8px">
+        <div class="legend-item"><div class="ld" style="background:#00ff88;box-shadow:0 0 5px #00ff88"></div><span>Crew 0</span></div>
+        <div class="legend-item"><div class="ld" style="background:#00ccff;box-shadow:0 0 5px #00ccff"></div><span>Crew 1</span></div>
+        <div class="legend-item"><div class="ld" style="background:#ffff00;box-shadow:0 0 5px #ffff00"></div><span>Crew 2</span></div>
+        <div class="legend-item"><div class="ld" style="background:#ff44ff;box-shadow:0 0 5px #ff44ff"></div><span>Crew 3+</span></div>
       </div>
     </div>
   </div>
 </div>
 
 <div id="controls">
-  <button class="ctrl-btn" id="btn-reset" title="Reset">&#x23EE;</button>
-  <button class="ctrl-btn" id="btn-back"  title="Step back">&#x23EA;</button>
-  <button class="ctrl-btn" id="btn-play"  title="Play / Pause">&#x25B6;</button>
-  <button class="ctrl-btn" id="btn-step"  title="Step forward">&#x23E9;</button>
+  <button class="ctrl-btn" id="btn-reset" title="Reset (R)">&#x23EE;</button>
+  <button class="ctrl-btn" id="btn-back"  title="Step back (&#x2190;)">&#x23EA;</button>
+  <button class="ctrl-btn" id="btn-play"  title="Play / Pause (Space)">&#x25B6;</button>
+  <button class="ctrl-btn" id="btn-step"  title="Step forward (&#x2192;)">&#x23E9;</button>
 
   <div id="progress-wrap">
-    <div id="progress-bar-outer">
-      <div id="progress-bar-fill"></div>
-    </div>
+    <div id="progress-bar-outer"><div id="progress-bar-fill"></div></div>
     <div id="turn-label">Load a replay to begin</div>
   </div>
 
@@ -227,50 +415,76 @@
     <span id="speed-label">3&times;</span>
   </div>
 
+  <span id="kbd-hint"><kbd>Space</kbd> <kbd>&larr;</kbd> <kbd>&rarr;</kbd> <kbd>R</kbd></span>
+
   <button id="load-btn">Load File</button>
   <input type="file" id="file-input" accept=".json">
 </div>
 
+<div id="timeline-section">
+  <div id="timeline-header">
+    <span class="section-label">Score Timeline</span>
+    <span style="font-size:10px;color:var(--text-dim);font-family:monospace">click to jump</span>
+  </div>
+  <canvas id="timeline-canvas"></canvas>
+</div>
+
 <div id="action-log">
   <div id="log-header">Actions This Turn</div>
-  <div id="log-content">&mdash;</div>
+  <div id="log-content"><span style="color:#202048">&mdash;</span></div>
 </div>
+
+<div id="tooltip"></div>
 
 <script>
 // ── State ─────────────────────────────────────────────────────────────────────
 let steps = [];
 let meta  = { scenario: '?', agent: '?', seed: '?' };
 let currentIdx = 0;
-let playing   = false;
+let playing = false;
 let playTimer = null;
-let knownCells = {};  // key → last-seen cell data
+let knownCells = {};
+let everOnFire = new Set();
+let prevCrewPositions = {};
+let newlyIgnited = new Set();
 
 const CREW_COLORS = ['#00ff88', '#00ccff', '#ffff00', '#ff44ff'];
 
-// ── Canvas ────────────────────────────────────────────────────────────────────
+// ── Canvas (DPR-aware, set once) ──────────────────────────────────────────────
 const canvas = document.getElementById('grid-canvas');
 const ctx    = canvas.getContext('2d');
+const CS = 530;
+const dpr = window.devicePixelRatio || 1;
+canvas.width  = CS * dpr;
+canvas.height = CS * dpr;
+ctx.scale(dpr, dpr);
 
+// ── Color helpers ─────────────────────────────────────────────────────────────
 function fireFill(intensity) {
   const t = Math.min(1, intensity / 100);
-  const r = 255;
-  const g = Math.round(140 * (1 - t));
-  return `rgb(${r},${g},0)`;
+  return `rgb(255,${Math.round(136 * (1 - t))},0)`;
 }
 
+function popFill(pop, maxPop) {
+  if (!maxPop) return '#0e0e1e';
+  const t = Math.min(1, pop / maxPop);
+  return `rgb(${Math.round(12 + t * 18)},${Math.round(22 + t * 48)},${Math.round(58 + t * 110)})`;
+}
+
+// ── Draw ──────────────────────────────────────────────────────────────────────
 function drawGrid(obs) {
-  const W = obs.grid_width  || 14;
-  const H = obs.grid_height || 14;
-  const SZ = 500;
-  canvas.width  = SZ;
-  canvas.height = SZ;
-  const cw = SZ / W;
-  const ch = SZ / H;
+  const W = (obs.grid && obs.grid[0]) || obs.grid_width  || 14;
+  const H = (obs.grid && obs.grid[1]) || obs.grid_height || 14;
+  const cw = CS / W;
+  const ch = CS / H;
 
-  ctx.fillStyle = '#0a0a14';
-  ctx.fillRect(0, 0, SZ, SZ);
+  let maxPop = 1;
+  for (const c of Object.values(knownCells)) if (c.pop > maxPop) maxPop = c.pop;
 
-  // Index current step
+  ctx.clearRect(0, 0, CS, CS);
+  ctx.fillStyle = '#08080f';
+  ctx.fillRect(0, 0, CS, CS);
+
   const cur = {};
   for (const c of (obs.cells || [])) cur[`${c.x},${c.y}`] = c;
 
@@ -279,60 +493,276 @@ function drawGrid(obs) {
       const key = `${x},${y}`;
       const cell   = cur[key] || knownCells[key];
       const dimmed = !cur[key] && !!knownCells[key];
-      const px = x * cw + 1, py = y * ch + 1, pw = cw - 2, ph = ch - 2;
+      const px = x * cw + 0.5, py = y * ch + 0.5, pw = cw - 1, ph = ch - 1;
 
       if (!cell) {
         ctx.globalAlpha = 1;
-        ctx.fillStyle = '#12121f';
+        ctx.fillStyle = '#0b0b18';
         ctx.fillRect(px, py, pw, ph);
         continue;
       }
 
-      ctx.globalAlpha = dimmed ? 0.4 : 1;
+      ctx.globalAlpha = dimmed ? 0.3 : 1;
 
-      if (cell.on_fire) {
-        const fill = fireFill(cell.intensity);
+      if (cell.fire || cell.on_fire) {
+        const isNew = newlyIgnited.has(key);
+        const fill  = isNew ? '#ffee22' : fireFill(cell.intensity);
         if (!dimmed) {
           ctx.shadowColor = fill;
-          ctx.shadowBlur  = cell.pop > 0 ? 20 : 10;
+          ctx.shadowBlur  = isNew ? 28 : (cell.pop > 0 ? 18 : 10);
         }
-        ctx.fillStyle = cell.pop > 0 ? '#ff1100' : fill;
+        ctx.fillStyle = isNew ? '#ffee44' : (cell.pop > 0 ? '#ff2200' : fill);
         ctx.fillRect(px, py, pw, ph);
         ctx.shadowBlur = 0;
+      } else if (everOnFire.has(key)) {
+        ctx.fillStyle = '#160c04';
+        ctx.fillRect(px, py, pw, ph);
+        if (!dimmed) {
+          ctx.fillStyle = 'rgba(70,35,8,0.5)';
+          ctx.fillRect(px + pw * 0.15, py + ph * 0.15, pw * 0.28, ph * 0.28);
+          ctx.fillRect(px + pw * 0.58, py + ph * 0.52, pw * 0.22, ph * 0.22);
+        }
       } else if (cell.pop > 0) {
-        ctx.fillStyle = '#1a3870';
+        ctx.fillStyle = popFill(cell.pop, maxPop);
         ctx.fillRect(px, py, pw, ph);
       } else {
-        ctx.fillStyle = '#1c1c30';
+        ctx.fillStyle = '#0e0e1e';
         ctx.fillRect(px, py, pw, ph);
       }
       ctx.globalAlpha = 1;
     }
   }
 
+  // Crew trails
+  for (const crew of (obs.crews || [])) {
+    const prev = prevCrewPositions[crew.id];
+    if (!prev) continue;
+    const [px2, py2] = prev;
+    const [cx2, cy2] = crew.cell;
+    if (px2 === cx2 && py2 === cy2) continue;
+    const x1 = px2 * cw + cw / 2, y1 = py2 * ch + ch / 2;
+    const x2 = cx2 * cw + cw / 2, y2 = cy2 * ch + ch / 2;
+    const color = CREW_COLORS[crew.id % CREW_COLORS.length];
+    ctx.globalAlpha = 0.5;
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 1.8;
+    ctx.setLineDash([3, 4]);
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    // Arrow tip
+    const ang = Math.atan2(y2 - y1, x2 - x1);
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(x2, y2);
+    ctx.lineTo(x2 - 6 * Math.cos(ang - 0.4), y2 - 6 * Math.sin(ang - 0.4));
+    ctx.lineTo(x2 - 6 * Math.cos(ang + 0.4), y2 - 6 * Math.sin(ang + 0.4));
+    ctx.closePath();
+    ctx.fill();
+    ctx.globalAlpha = 1;
+  }
+
   // Crews
   for (const crew of (obs.crews || [])) {
-    const [cx, cy] = crew.cell;
-    const px = cx * cw + cw / 2;
-    const py = cy * ch + ch / 2;
-    const r  = Math.min(cw, ch) * 0.30;
+    const [cx2, cy2] = crew.cell;
+    const px2 = cx2 * cw + cw / 2;
+    const py2 = cy2 * ch + ch / 2;
+    const r = Math.min(cw, ch) * 0.27;
     const color = CREW_COLORS[crew.id % CREW_COLORS.length];
 
     ctx.shadowColor = color;
-    ctx.shadowBlur  = 10;
+    ctx.shadowBlur  = 16;
     ctx.globalAlpha = 1;
+    // Outer ring
     ctx.beginPath();
-    ctx.arc(px, py, r, 0, Math.PI * 2);
+    ctx.arc(px2, py2, r + 2.5, 0, Math.PI * 2);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+    // Fill
+    ctx.shadowColor = color;
+    ctx.shadowBlur  = 8;
+    ctx.beginPath();
+    ctx.arc(px2, py2, r, 0, Math.PI * 2);
     ctx.fillStyle = color;
     ctx.fill();
     ctx.shadowBlur = 0;
-
-    const fs = Math.max(7, Math.round(r * 0.85));
+    // Label
+    const fs = Math.max(8, Math.round(r * 0.9));
     ctx.fillStyle = '#000';
     ctx.font = `bold ${fs}px monospace`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(String(crew.id), px, py + 0.5);
+    ctx.fillText(String(crew.id), px2, py2 + 0.5);
+  }
+}
+
+// ── Sparkline ─────────────────────────────────────────────────────────────────
+const spkCanvas = document.getElementById('sparkline-canvas');
+const spkCtx    = spkCanvas.getContext('2d');
+
+function drawSparkline() {
+  const W = spkCanvas.parentElement.clientWidth - 24;
+  const H = 46;
+  const r = window.devicePixelRatio || 1;
+  spkCanvas.width  = W * r;
+  spkCanvas.height = H * r;
+  spkCanvas.style.width  = W + 'px';
+  spkCanvas.style.height = H + 'px';
+  spkCtx.scale(r, r);
+  spkCtx.clearRect(0, 0, W, H);
+  if (steps.length < 2) return;
+
+  const scores = steps.map(s => s.observation.score ?? 0);
+  const mn = Math.min(...scores), mx = Math.max(...scores);
+  const range = mx - mn || 1;
+  const toX = i => (i / (steps.length - 1)) * W;
+  const toY = v => H - 4 - ((v - mn) / range) * (H - 8);
+
+  if (mn < 0 && mx > 0) {
+    const zy = toY(0);
+    spkCtx.strokeStyle = 'rgba(80,80,140,0.4)';
+    spkCtx.lineWidth = 1;
+    spkCtx.setLineDash([3, 3]);
+    spkCtx.beginPath();
+    spkCtx.moveTo(0, zy);
+    spkCtx.lineTo(W, zy);
+    spkCtx.stroke();
+    spkCtx.setLineDash([]);
+  }
+
+  spkCtx.beginPath();
+  spkCtx.moveTo(toX(0), H);
+  for (let i = 0; i < steps.length; i++) spkCtx.lineTo(toX(i), toY(scores[i]));
+  spkCtx.lineTo(toX(steps.length - 1), H);
+  spkCtx.closePath();
+  spkCtx.fillStyle = 'rgba(85,102,255,0.1)';
+  spkCtx.fill();
+
+  spkCtx.beginPath();
+  for (let i = 0; i < steps.length; i++) {
+    if (i === 0) spkCtx.moveTo(toX(i), toY(scores[i]));
+    else spkCtx.lineTo(toX(i), toY(scores[i]));
+  }
+  spkCtx.strokeStyle = '#5566ff';
+  spkCtx.lineWidth = 1.5;
+  spkCtx.stroke();
+
+  if (currentIdx < steps.length) {
+    const cx2 = toX(currentIdx), cy2 = toY(scores[currentIdx]);
+    spkCtx.beginPath();
+    spkCtx.arc(cx2, cy2, 3, 0, Math.PI * 2);
+    spkCtx.fillStyle = '#fff';
+    spkCtx.shadowColor = '#5566ff';
+    spkCtx.shadowBlur = 6;
+    spkCtx.fill();
+    spkCtx.shadowBlur = 0;
+  }
+}
+
+// ── Timeline ──────────────────────────────────────────────────────────────────
+const tlCanvas = document.getElementById('timeline-canvas');
+const tlCtx    = tlCanvas.getContext('2d');
+
+function drawTimeline() {
+  const W = tlCanvas.parentElement.clientWidth - 26;
+  const H = 62;
+  const r = window.devicePixelRatio || 1;
+  tlCanvas.width  = W * r;
+  tlCanvas.height = H * r;
+  tlCanvas.style.width  = W + 'px';
+  tlCanvas.style.height = H + 'px';
+  tlCtx.scale(r, r);
+  tlCtx.clearRect(0, 0, W, H);
+  tlCtx.fillStyle = '#08080f';
+  tlCtx.fillRect(0, 0, W, H);
+
+  if (steps.length < 2) {
+    tlCtx.fillStyle = '#1c1c3c';
+    tlCtx.font = '11px monospace';
+    tlCtx.textAlign = 'center';
+    tlCtx.textBaseline = 'middle';
+    tlCtx.fillText('Load a replay to see timeline', W / 2, H / 2);
+    return;
+  }
+
+  const scores = steps.map(s => s.observation.score ?? 0);
+  const mn = Math.min(...scores, 0), mx = Math.max(...scores, 1);
+  const range = mx - mn || 1;
+  const pad = { t: 6, b: 18, l: 6, r: 6 };
+  const IW = W - pad.l - pad.r, IH = H - pad.t - pad.b;
+  const toX = i => pad.l + (i / (steps.length - 1)) * IW;
+  const toY = v => pad.t + IH - ((v - mn) / range) * IH;
+
+  // Zero line
+  const zy = toY(0);
+  tlCtx.strokeStyle = 'rgba(80,80,140,0.35)';
+  tlCtx.lineWidth = 1;
+  tlCtx.setLineDash([4, 4]);
+  tlCtx.beginPath();
+  tlCtx.moveTo(pad.l, zy);
+  tlCtx.lineTo(W - pad.r, zy);
+  tlCtx.stroke();
+  tlCtx.setLineDash([]);
+
+  // Fill
+  const grad = tlCtx.createLinearGradient(0, pad.t, 0, H - pad.b);
+  grad.addColorStop(0, 'rgba(85,102,255,0.28)');
+  grad.addColorStop(1, 'rgba(85,102,255,0.02)');
+  tlCtx.beginPath();
+  tlCtx.moveTo(toX(0), H - pad.b);
+  for (let i = 0; i < steps.length; i++) tlCtx.lineTo(toX(i), toY(scores[i]));
+  tlCtx.lineTo(toX(steps.length - 1), H - pad.b);
+  tlCtx.closePath();
+  tlCtx.fillStyle = grad;
+  tlCtx.fill();
+
+  // Line
+  tlCtx.beginPath();
+  for (let i = 0; i < steps.length; i++) {
+    if (i === 0) tlCtx.moveTo(toX(i), toY(scores[i]));
+    else tlCtx.lineTo(toX(i), toY(scores[i]));
+  }
+  tlCtx.strokeStyle = '#5566ff';
+  tlCtx.lineWidth = 2;
+  tlCtx.stroke();
+
+  // X-axis ticks
+  const lastObs = steps[steps.length - 1].observation;
+  const maxT = lastObs.max_turns || (lastObs.turns_left != null ? lastObs.turn + lastObs.turns_left : steps.length);
+  const tickEvery = Math.ceil(maxT / 10);
+  tlCtx.fillStyle = '#2a2a50';
+  tlCtx.font = '8px monospace';
+  tlCtx.textAlign = 'center';
+  for (let t2 = 0; t2 <= maxT; t2 += tickEvery) {
+    const xi = Math.min(t2, steps.length - 1);
+    const tx = toX(xi);
+    tlCtx.fillStyle = '#222244';
+    tlCtx.fillRect(tx, H - pad.b + 2, 1, 3);
+    tlCtx.fillStyle = '#333360';
+    tlCtx.fillText(t2, tx, H - 2);
+  }
+
+  // Current position
+  if (currentIdx < steps.length) {
+    const cx2 = toX(currentIdx);
+    tlCtx.strokeStyle = 'rgba(255,255,255,0.45)';
+    tlCtx.lineWidth = 1.5;
+    tlCtx.beginPath();
+    tlCtx.moveTo(cx2, pad.t);
+    tlCtx.lineTo(cx2, H - pad.b);
+    tlCtx.stroke();
+    const cy2 = toY(scores[currentIdx]);
+    tlCtx.beginPath();
+    tlCtx.arc(cx2, cy2, 3.5, 0, Math.PI * 2);
+    tlCtx.fillStyle = '#fff';
+    tlCtx.shadowColor = '#5566ff';
+    tlCtx.shadowBlur = 8;
+    tlCtx.fill();
+    tlCtx.shadowBlur = 0;
   }
 }
 
@@ -340,96 +770,194 @@ function drawGrid(obs) {
 function updateStats(step) {
   const obs  = step.observation;
   const info = step.info || {};
-  const total = steps.length - 1;
 
-  document.getElementById('stat-turn').textContent =
-    `${obs.turn} / ${obs.max_turns}`;
-
+  document.getElementById('stat-turn').textContent = obs.turn ?? '—';
+  const maxTurns = obs.max_turns ?? (obs.turns_left != null ? obs.turn + obs.turns_left : null);
+  document.getElementById('stat-max').textContent  = maxTurns ?? '—';
   document.getElementById('stat-score').textContent =
     typeof obs.score === 'number' ? obs.score.toLocaleString() : '—';
-
   document.getElementById('stat-lives').textContent =
     info.lives_lost != null ? info.lives_lost.toLocaleString() : '—';
-
   document.getElementById('stat-cells').textContent =
     info.cells_burned != null ? info.cells_burned.toLocaleString() : '—';
 
-  const normEl = document.getElementById('stat-norm');
+  const normEl  = document.getElementById('stat-norm');
+  const normSub = document.getElementById('stat-norm-sub');
   if (info.norm_score != null) {
     const n = info.norm_score;
     normEl.textContent = n.toFixed(4);
-    normEl.className = 'stat-value ' + (n >= 1 ? 'good' : n >= 0 ? 'warn' : 'danger');
+    normEl.className = 'stat-value sv-md ' + (n >= 1 ? 'good' : n >= 0 ? 'warn' : 'danger');
+    normSub.textContent = n >= 1 ? '&#x2191; beats greedy' : n >= 0 ? 'below greedy' : '&#x2193; below do-nothing';
+    normSub.style.color = n >= 1 ? 'var(--good)' : n >= 0 ? 'var(--warn)' : 'var(--danger)';
   } else {
     normEl.textContent = '—';
-    normEl.className = 'stat-value';
+    normEl.className = 'stat-value sv-md';
+    normSub.textContent = 'vs greedy baseline';
+    normSub.style.color = '';
   }
 
+  const total = steps.length - 1;
   const pct = total > 0 ? (currentIdx / total) * 100 : 0;
   document.getElementById('progress-bar-fill').style.width = pct + '%';
-  document.getElementById('turn-label').textContent =
-    `Step ${currentIdx + 1} / ${total + 1}`;
+  document.getElementById('turn-label').textContent = `Step ${currentIdx + 1} / ${total + 1}`;
 }
 
+// ── Action log ────────────────────────────────────────────────────────────────
+const CMD_CLASS = { move: 'cmd-move', suppress: 'cmd-suppress', prep: 'cmd-prep', evacuate: 'cmd-evacuate' };
+
 function fmtCmd(cmd) {
-  if (!cmd) return '';
-  const id = cmd.crew ?? cmd.crew_id ?? '?';
   const type = cmd.action ?? cmd.type ?? '?';
-  const to = cmd.to || (cmd.x != null ? [cmd.x, cmd.y] : null);
+  const to   = cmd.to || (cmd.x != null ? [cmd.x, cmd.y] : null);
+  let label;
   switch (type) {
-    case 'move':     return `crew ${id}: move → (${to})`;
-    case 'suppress': return `crew ${id}: suppress`;
-    case 'prep':     return `crew ${id}: prep`;
-    case 'evacuate': return to ? `crew ${id}: evacuate → (${to})` : `crew ${id}: evacuate`;
-    default:         return JSON.stringify(cmd);
+    case 'move':     label = `move &rarr; (${to})`; break;
+    case 'suppress': label = 'suppress'; break;
+    case 'prep':     label = 'prep'; break;
+    case 'evacuate': label = to ? `evacuate &rarr; (${to})` : 'evacuate'; break;
+    default:         label = type;
   }
+  return `<span class="cmd-chip ${CMD_CLASS[type] || ''}">${label}</span>`;
 }
 
 function updateActionLog(action) {
   const el = document.getElementById('log-content');
-  if (!action) { el.innerHTML = '<span style="color:#333366">(terminal state)</span>'; return; }
+  if (!action) { el.innerHTML = '<span style="color:#1a1a40">(terminal state)</span>'; return; }
   const cmds = action.commands || [];
-  if (!cmds.length) { el.textContent = '(no commands)'; return; }
-  el.innerHTML = cmds.map(c => `<div>${fmtCmd(c)}</div>`).join('');
+  if (!cmds.length) { el.innerHTML = '<span style="color:#1a1a40">(no commands)</span>'; return; }
+
+  const grouped = {};
+  for (const cmd of cmds) {
+    const id = cmd.crew ?? cmd.crew_id ?? 0;
+    if (!grouped[id]) grouped[id] = [];
+    grouped[id].push(cmd);
+  }
+
+  el.innerHTML = Object.entries(grouped).map(([id, cs]) => {
+    const col = CREW_COLORS[Number(id) % CREW_COLORS.length];
+    return `<div class="crew-group">
+      <span class="crew-label" style="background:${col}1a;color:${col};border:1px solid ${col}40">crew ${id}</span>
+      ${cs.map(fmtCmd).join('')}
+    </div>`;
+  }).join('');
 }
 
-// ── Core navigation ───────────────────────────────────────────────────────────
-function buildKnownCells(upTo) {
-  const kc = {};
+// ── Tooltip ───────────────────────────────────────────────────────────────────
+const tooltip = document.getElementById('tooltip');
+let tooltipObs = null;
+
+canvas.addEventListener('mousemove', e => {
+  if (!tooltipObs) return;
+  const rect = canvas.getBoundingClientRect();
+  const W = (tooltipObs.grid && tooltipObs.grid[0]) || tooltipObs.grid_width  || 14;
+  const H = (tooltipObs.grid && tooltipObs.grid[1]) || tooltipObs.grid_height || 14;
+  const cw = CS / W, ch = CS / H;
+  const gx = Math.floor((e.clientX - rect.left) / cw);
+  const gy = Math.floor((e.clientY - rect.top) / ch);
+  if (gx < 0 || gx >= W || gy < 0 || gy >= H) { tooltip.style.display = 'none'; return; }
+  const key = `${gx},${gy}`;
+  const cell = (tooltipObs._cellMap || {})[key] || knownCells[key];
+  if (!cell) { tooltip.style.display = 'none'; return; }
+
+  const isFire = cell.fire || cell.on_fire;
+  const spread = cell.spread ?? cell.spreadability;
+  const prop   = cell.prop   ?? cell.property_remaining;
+  tooltip.innerHTML = [
+    `<span style="color:#6688cc">(${gx}, ${gy})</span>`,
+    `pop: <b>${cell.pop ?? 0}</b>`,
+    `fire: <b style="color:${isFire ? '#ff7722' : '#44cc66'}">${isFire ? `yes &mdash; intensity ${cell.intensity}` : 'no'}</b>`,
+    spread != null ? `spread: <b>${spread}</b>` : '',
+    prop   != null ? `prop: <b>${prop.toLocaleString()}</b>` : '',
+    everOnFire.has(key) && !isFire ? `<span style="color:#885533">burned out</span>` : '',
+  ].filter(Boolean).join('<br>');
+
+  tooltip.style.display = 'block';
+  const tx = e.clientX + 14, ty = e.clientY - 10;
+  tooltip.style.left = Math.min(tx, window.innerWidth - tooltip.offsetWidth - 10) + 'px';
+  tooltip.style.top  = Math.max(ty, 4) + 'px';
+});
+
+canvas.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+
+// ── Navigation ────────────────────────────────────────────────────────────────
+function isCellOnFire(c) { return !!(c.fire || c.on_fire); }
+
+function buildKnown(upTo) {
+  const kc = {}, eof = new Set();
   for (let i = 0; i <= upTo; i++) {
     for (const c of (steps[i].observation.cells || [])) {
       kc[`${c.x},${c.y}`] = { ...c };
+      if (isCellOnFire(c)) eof.add(`${c.x},${c.y}`);
     }
   }
-  return kc;
+  return { kc, eof };
+}
+
+function computeNewlyIgnited(prevObs, curObs) {
+  const ni = new Set();
+  if (!prevObs) return ni;
+  const prevFire = new Set((prevObs.cells || []).filter(isCellOnFire).map(c => `${c.x},${c.y}`));
+  for (const c of (curObs.cells || [])) {
+    if (isCellOnFire(c) && !prevFire.has(`${c.x},${c.y}`)) ni.add(`${c.x},${c.y}`);
+  }
+  return ni;
+}
+
+function attachCellMap(obs) {
+  obs._cellMap = Object.fromEntries((obs.cells || []).map(c => [`${c.x},${c.y}`, c]));
+}
+
+function render(step) {
+  drawGrid(step.observation);
+  updateStats(step);
+  updateActionLog(step.action);
+  drawSparkline();
+  drawTimeline();
 }
 
 function gotoStep(idx) {
   if (!steps.length) return;
   idx = Math.max(0, Math.min(idx, steps.length - 1));
   currentIdx = idx;
-  knownCells = buildKnownCells(idx);
-  const step = steps[idx];
-  drawGrid(step.observation);
-  updateStats(step);
-  updateActionLog(step.action);
+  const { kc, eof } = buildKnown(idx);
+  knownCells = kc;
+  everOnFire = eof;
+  newlyIgnited = computeNewlyIgnited(
+    idx > 0 ? steps[idx - 1].observation : null,
+    steps[idx].observation
+  );
+  prevCrewPositions = {};
+  if (idx > 0) {
+    for (const crew of (steps[idx - 1].observation.crews || [])) {
+      prevCrewPositions[crew.id] = crew.cell;
+    }
+  }
+  attachCellMap(steps[idx].observation);
+  tooltipObs = steps[idx].observation;
+  render(steps[idx]);
 }
 
 function advanceStep() {
-  // Fast path: only merge new cells (no rebuild)
   currentIdx++;
   const step = steps[currentIdx];
+  const prevObs = steps[currentIdx - 1].observation;
+  newlyIgnited = computeNewlyIgnited(prevObs, step.observation);
   for (const c of (step.observation.cells || [])) {
     knownCells[`${c.x},${c.y}`] = { ...c };
+    if (isCellOnFire(c)) everOnFire.add(`${c.x},${c.y}`);
   }
-  drawGrid(step.observation);
-  updateStats(step);
-  updateActionLog(step.action);
+  prevCrewPositions = {};
+  for (const crew of (prevObs.crews || [])) prevCrewPositions[crew.id] = crew.cell;
+  attachCellMap(step.observation);
+  tooltipObs = step.observation;
+  render(step);
 }
 
 // ── Playback ──────────────────────────────────────────────────────────────────
 function setPlaying(val) {
   playing = val;
-  document.getElementById('btn-play').innerHTML = playing ? '&#x23F8;' : '&#x25B6;';
+  const btn = document.getElementById('btn-play');
+  btn.innerHTML = playing ? '&#x23F8;' : '&#x25B6;';
+  btn.classList.toggle('active', playing);
   if (!playing && playTimer) { clearTimeout(playTimer); playTimer = null; }
   if (playing) scheduleNext();
 }
@@ -438,12 +966,8 @@ function scheduleNext() {
   if (!playing) return;
   const speed = parseInt(document.getElementById('speed-slider').value, 10);
   playTimer = setTimeout(() => {
-    if (currentIdx < steps.length - 1) {
-      advanceStep();
-      scheduleNext();
-    } else {
-      setPlaying(false);
-    }
+    if (currentIdx < steps.length - 1) { advanceStep(); scheduleNext(); }
+    else setPlaying(false);
   }, 1000 / speed);
 }
 
@@ -457,7 +981,6 @@ function normalizeTrace(data) {
     meta = { scenario: data.domain_id || '?', agent: 'model', seed: '?' };
     const ep = Object.values(data.replay)[0] || [];
     return ep.map(s => ({
-      turn: s.step,
       observation: s.observation,
       action: typeof s.action === 'string'
         ? (() => { try { return JSON.parse(s.action); } catch { return s.action; } })()
@@ -473,17 +996,16 @@ function normalizeTrace(data) {
 
 function loadTrace(data) {
   setPlaying(false);
-  knownCells = {};
+  knownCells = {}; everOnFire = new Set(); prevCrewPositions = {}; newlyIgnited = new Set();
   steps = normalizeTrace(data);
   if (!steps.length) { alert('Could not parse replay — check format.'); return; }
-
-  document.getElementById('meta-line').textContent =
-    `scenario: ${meta.scenario}  ·  agent: ${meta.agent}  ·  seed: ${meta.seed}`;
-
+  document.getElementById('meta-line').innerHTML =
+    `<span style="color:#6677ff">${meta.scenario}</span> &nbsp;&middot;&nbsp; ${meta.agent} &nbsp;&middot;&nbsp; seed ${meta.seed}`;
+  drawTimeline();
   gotoStep(0);
 }
 
-// ── Wiring ────────────────────────────────────────────────────────────────────
+// ── Event wiring ──────────────────────────────────────────────────────────────
 document.getElementById('btn-reset').addEventListener('click', () => { setPlaying(false); gotoStep(0); });
 document.getElementById('btn-back').addEventListener('click',  () => { setPlaying(false); gotoStep(currentIdx - 1); });
 document.getElementById('btn-play').addEventListener('click',  () => { if (steps.length) setPlaying(!playing); });
@@ -500,6 +1022,15 @@ document.getElementById('progress-bar-outer').addEventListener('click', function
   gotoStep(Math.round(t * (steps.length - 1)));
 });
 
+tlCanvas.addEventListener('click', function (e) {
+  if (!steps.length) return;
+  setPlaying(false);
+  const rect = this.getBoundingClientRect();
+  const pad = 6;
+  const t = Math.max(0, Math.min(1, (e.clientX - rect.left - pad) / (this.clientWidth - pad * 2)));
+  gotoStep(Math.round(t * (steps.length - 1)));
+});
+
 document.getElementById('load-btn').addEventListener('click', () => document.getElementById('file-input').click());
 document.getElementById('file-input').addEventListener('change', function () {
   const file = this.files[0];
@@ -512,23 +1043,32 @@ document.getElementById('file-input').addEventListener('change', function () {
   reader.readAsText(file);
 });
 
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.key === ' ' || e.code === 'Space') { e.preventDefault(); if (steps.length) setPlaying(!playing); }
+  if (e.key === 'ArrowRight') { e.preventDefault(); setPlaying(false); if (currentIdx < steps.length - 1) advanceStep(); }
+  if (e.key === 'ArrowLeft')  { e.preventDefault(); setPlaying(false); gotoStep(currentIdx - 1); }
+  if (e.key === 'r' || e.key === 'R') { setPlaying(false); gotoStep(0); }
+});
+
 // ── Auto-load ─────────────────────────────────────────────────────────────────
 fetch('./data/replay.json')
   .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
   .then(loadTrace)
   .catch(() => {
-    ctx.fillStyle = '#12121f';
-    ctx.fillRect(0, 0, 500, 500);
-    ctx.fillStyle = '#2a2a50';
+    ctx.fillStyle = '#08080f';
+    ctx.fillRect(0, 0, CS, CS);
+    ctx.fillStyle = '#1c1c3c';
     ctx.font = '13px monospace';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('No replay loaded', 250, 230);
+    ctx.fillText('No replay loaded', CS / 2, CS / 2 - 24);
     ctx.font = '10px monospace';
-    ctx.fillStyle = '#1e1e40';
-    ctx.fillText('python run_local.py --agent greedy --scenario heartland', 250, 255);
-    ctx.fillText('     --trace-out showcase/data/replay.json', 250, 270);
-    ctx.fillText('then: cd showcase && python -m http.server 8080', 250, 295);
+    ctx.fillStyle = '#141430';
+    ctx.fillText('python run_local.py --agent greedy --scenario heartland \\', CS / 2, CS / 2 + 8);
+    ctx.fillText('    --trace-out showcase/data/replay.json', CS / 2, CS / 2 + 26);
+    ctx.fillText('cd showcase && python -m http.server 8080', CS / 2, CS / 2 + 52);
+    drawTimeline();
   });
 </script>
 </body>

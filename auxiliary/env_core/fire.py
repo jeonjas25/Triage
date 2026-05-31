@@ -20,17 +20,23 @@ class FireModel:
         Advance every burning cell one tick.
         active_timers is mutated in place.
         Returns (newly_ignited_count, property_lost_this_tick).
+
+        Spread uses combined probability across all burning neighbors:
+            P(ignite) = 1 - prod(1 - p_i)  for each burning neighbor i
+            p_i = (target.spreadability/100) * (source.intensity/100)
+        A single pre-rolled value per cell is compared against P(ignite),
+        so the outcome is deterministic for identical seeds regardless of
+        how many neighbors are burning or in what order they are visited.
         """
         newly_ignited = 0
         property_lost = 0
 
         burning = [c for c in grid.cells.values() if c.on_fire]
 
-        # Grow intensity on existing burning cells
+        # 1. Grow intensity on burning cells
         for cell in burning:
             increment = schedule_t["intensity_growth"].get((cell.x, cell.y), 0)
             cell.intensity = min(100, cell.intensity + increment)
-
             if cell.intensity > cell.peak_intensity:
                 delta_peak = cell.intensity - cell.peak_intensity
                 cell.peak_intensity = cell.intensity
@@ -38,7 +44,7 @@ class FireModel:
                 cell.property_remaining = max(0, cell.property_remaining - prop_delta)
                 property_lost += prop_delta
 
-        # Tick burn timers; burn out cells at zero
+        # 2. Tick burn timers; extinguish cells whose timer hits zero
         for cell in burning:
             key = (cell.x, cell.y)
             timer = active_timers.get(key, 1)
@@ -49,17 +55,29 @@ class FireModel:
             else:
                 active_timers[key] = timer - 1
 
-        # Spread to neighbors (only from still-burning cells)
-        for cell in [c for c in grid.cells.values() if c.on_fire]:
-            for nb in grid.neighbors(cell.x, cell.y):
+        # 3. Accumulate ignition pressure on non-burning neighbors from ALL
+        #    still-burning sources. Combined probability uses the complement
+        #    product so multiple burning neighbors compound correctly.
+        p_no_ignite: dict[tuple[int, int], float] = {}
+        for src in [c for c in grid.cells.values() if c.on_fire]:
+            for nb in grid.neighbors(src.x, src.y):
                 if nb.on_fire:
                     continue
-                roll = schedule_t["ignition_rolls"].get((nb.x, nb.y), 1.0)
-                likelihood = (nb.spreadability / 100.0) * (cell.intensity / 100.0)
-                if roll < likelihood:
+                key = (nb.x, nb.y)
+                p_src = (nb.spreadability / 100.0) * (src.intensity / 100.0)
+                if key not in p_no_ignite:
+                    p_no_ignite[key] = 1.0
+                p_no_ignite[key] *= (1.0 - p_src)
+
+        # 4. Roll once per candidate using the pre-rolled schedule value
+        for key, p_no in p_no_ignite.items():
+            p_ignite = 1.0 - p_no
+            roll = schedule_t["ignition_rolls"].get(key, 1.0)
+            if roll < p_ignite:
+                nb = grid.get(key[0], key[1])
+                if nb and not nb.on_fire:
                     nb.on_fire = True
                     nb.intensity = 1
-                    key = (nb.x, nb.y)
                     active_timers[key] = burn_lifespans.get(key, 15)
                     newly_ignited += 1
 
