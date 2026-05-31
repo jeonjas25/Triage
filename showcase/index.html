@@ -252,7 +252,7 @@ const canvas = document.getElementById('grid-canvas');
 const ctx    = canvas.getContext('2d');
 
 function fireFill(intensity) {
-  const t = Math.min(1, intensity / 100);
+  const t = Math.min(1, intensity / 5);
   const r = 255;
   const g = Math.round(140 * (1 - t));
   return `rgb(${r},${g},0)`;

@@ -15,28 +15,20 @@ class FireModel:
         schedule_t: dict,
         active_timers: dict[tuple[int, int], int],
         burn_lifespans: dict[tuple[int, int], int],
-    ) -> tuple[int, int]:
+    ) -> int:
         """
         Advance every burning cell one tick.
         active_timers is mutated in place.
-        Returns (newly_ignited_count, property_lost_this_tick).
+        Returns newly_ignited_count.
         """
         newly_ignited = 0
-        property_lost = 0
 
         burning = [c for c in grid.cells.values() if c.on_fire]
 
-        # Grow intensity on existing burning cells
+        # Grow intensity on existing burning cells (capped at 5)
         for cell in burning:
             increment = schedule_t["intensity_growth"].get((cell.x, cell.y), 0)
-            cell.intensity = min(100, cell.intensity + increment)
-
-            if cell.intensity > cell.peak_intensity:
-                delta_peak = cell.intensity - cell.peak_intensity
-                cell.peak_intensity = cell.intensity
-                prop_delta = cell.property_value * delta_peak // 100
-                cell.property_remaining = max(0, cell.property_remaining - prop_delta)
-                property_lost += prop_delta
+            cell.intensity = min(5, cell.intensity + increment)
 
         # Tick burn timers; burn out cells at zero
         for cell in burning:
@@ -55,7 +47,7 @@ class FireModel:
                 if nb.on_fire:
                     continue
                 roll = schedule_t["ignition_rolls"].get((nb.x, nb.y), 1.0)
-                likelihood = (nb.spreadability / 100.0) * (cell.intensity / 100.0)
+                likelihood = (nb.catchability / 5.0) * (cell.intensity / 5.0)
                 if roll < likelihood:
                     nb.on_fire = True
                     nb.intensity = 1
@@ -63,7 +55,7 @@ class FireModel:
                     active_timers[key] = burn_lifespans.get(key, 15)
                     newly_ignited += 1
 
-        return newly_ignited, property_lost
+        return newly_ignited
 
     def intensity(self, cell) -> float:
-        return cell.intensity / 100.0
+        return cell.intensity / 5.0

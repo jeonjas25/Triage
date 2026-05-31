@@ -16,7 +16,7 @@ def compute_tick_casualties(grid: "Grid") -> int:
     total = 0
     for cell in grid.cells.values():
         if cell.on_fire and cell.pop > 0:
-            share = cell.intensity / 100.0
+            share = cell.intensity / 5.0
             total += round(cell.pop * share)
     return total
 
@@ -25,7 +25,6 @@ def compute_tick_score_delta(
     grid: "Grid",
     casualties: int,
     newly_ignited: int,
-    property_lost: int,
 ) -> int:
     safe_pop = 0
     burning_pop = 0
@@ -47,6 +46,5 @@ def compute_tick_score_delta(
         - burning_cells * 5
         - casualties * 100
         - newly_ignited * 1000
-        - property_lost * 1
     )
     return delta
