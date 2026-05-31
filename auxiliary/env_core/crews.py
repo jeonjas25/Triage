@@ -9,7 +9,7 @@ if TYPE_CHECKING:
     from env_core.grid import Grid
 
 # Every crew is a single unit that does the same fixed amount of work per action.
-SUPPRESS_POWER = 2      # intensity points removed by one suppress action
+SUPPRESS_POWER = 3      # intensity points removed per crew member per suppress action
 PREP_POWER = 1          # catchability points removed by one prep action
 EVACUATE_CAPACITY = 50  # people moved by one evacuate action
 
@@ -17,6 +17,7 @@ EVACUATE_CAPACITY = 50  # people moved by one evacuate action
 @dataclass
 class Crew:
     id: int
+    size: int
     cell: list[int]  # [x, y]
     actions_per_turn: int
     actions_remaining: int = 0
@@ -30,6 +31,7 @@ class Crew:
     def to_obs(self) -> dict[str, Any]:
         return {
             "id": self.id,
+            "size": self.size,
             "cell": self.cell,
             "actions_remaining": self.actions_remaining,
         }
@@ -85,11 +87,7 @@ def apply_commands(
             if cell is None or not cell.on_fire:
                 illegal += 1
                 continue
-<<<<<<< HEAD
-            cell.intensity = max(0, cell.intensity - crew.size * 3)
-=======
-            cell.intensity = max(0, cell.intensity - SUPPRESS_POWER)
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
+            cell.intensity = max(0, cell.intensity - crew.size * SUPPRESS_POWER)
             if cell.intensity == 0:
                 cell.on_fire = False
             crew.actions_remaining -= 1
@@ -99,11 +97,7 @@ def apply_commands(
             if cell is None:
                 illegal += 1
                 continue
-<<<<<<< HEAD
-            cell.spreadability = max(0, cell.spreadability - crew.size * 3)
-=======
-            cell.catchability = max(0, cell.catchability - PREP_POWER)
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
+            cell.catchability = max(1, cell.catchability - PREP_POWER)
             crew.actions_remaining -= 1
 
         elif action == "evacuate":

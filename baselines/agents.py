@@ -62,6 +62,9 @@ class GreedyAgent:
         def on_fire(c):
             return bool(c.get("fire") or c.get("on_fire"))
 
+        def catchability(c):
+            return c.get("catch", c.get("spread", c.get("catchability", 3)))
+
         # Rank fires by (intensity * pop_at_risk + intensity) descending
         burning = sorted(
             (c for c in cells.values() if on_fire(c)),
@@ -88,7 +91,7 @@ class GreedyAgent:
             grid = obs.get("grid", [obs.get("grid_width", 14), obs.get("grid_height", 14)])
             for _ in range(remaining):
                 current = cells.get((cx, cy))
-                cmd = _best_action(crew["id"], cx, cy, current, target, cells, grid[0], grid[1], on_fire)
+                cmd = _best_action(crew["id"], cx, cy, current, target, cells, grid[0], grid[1], on_fire, catchability)
                 commands.append(cmd)
                 # Track position changes so subsequent actions in this turn are correct
                 if cmd["action"] in ("move", "evacuate") and "to" in cmd:
@@ -105,13 +108,13 @@ def _best_action(
     cells: dict,
     W: int, H: int,
     on_fire=None,
+    catchability=None,
 ) -> dict:
     if on_fire is None:
         on_fire = lambda c: bool(c.get("fire") or c.get("on_fire"))
+    if catchability is None:
+        catchability = lambda c: c.get("catch", 3)
     dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-
-    def spread(c):
-        return c.get("spread", c.get("spreadability", 50))
 
     # 1. EVACUATE — standing on burning cell with meaningful population
     if current and on_fire(current) and current.get("pop", 0) > 30:
@@ -134,9 +137,9 @@ def _best_action(
         ):
             best_nb_fire = nb
 
-    # 4. PREP — on a high-spreadability cell adjacent to fire with population at risk
+    # 4. PREP — adjacent to fire, on a high-catchability cell with population at risk
     if current and not on_fire(current):
-        if best_nb_fire is not None and spread(current) > 45 and current.get("pop", 0) > 50:
+        if best_nb_fire is not None and catchability(current) >= 4 and current.get("pop", 0) > 50:
             return {"crew": crew_id, "action": "prep"}
 
     # 5. MOVE toward target
@@ -147,17 +150,7 @@ def _best_action(
         step = _step_toward([cx, cy], dest)
         return {"crew": crew_id, "action": "move", "to": step}
 
-    # 6. No target: prep current cell if it has high fuel load
-    if current and spread(current) > 50:
-        return {"crew": crew_id, "action": "prep"}
-
-    # 7. Prep any adjacent high-spreadability cell to build a proactive firebreak
-    for dx, dy in dirs:
-        nb = cells.get((cx + dx, cy + dy))
-        if nb and not on_fire(nb) and spread(nb) > 60:
-            return {"crew": crew_id, "action": "move", "to": [cx + dx, cy + dy]}
-
-    # 8. Truly idle
+    # 6. Truly idle
     if current and on_fire(current):
         return {"crew": crew_id, "action": "suppress"}
     return {"crew": crew_id, "action": "prep"}
@@ -170,7 +163,7 @@ def _safest_neighbor(
     W: int, H: int,
     on_fire=None,
 ) -> tuple[int, int] | None:
-    """Return the adjacent cell that is not on fire and has the lowest spreadability."""
+    """Return the adjacent cell that is not on fire and has the lowest catchability."""
     if on_fire is None:
         on_fire = lambda c: bool(c.get("fire") or c.get("on_fire"))
     candidates = []
@@ -180,8 +173,8 @@ def _safest_neighbor(
             continue
         nb = cells.get((nx, ny))
         if nb is None or not on_fire(nb):
-            sp = nb.get("spread", nb.get("spreadability", 50)) if nb else 50
-            candidates.append((sp, nx, ny))
+            cat = nb.get("catch", 3) if nb else 3
+            candidates.append((cat, nx, ny))
     if not candidates:
         return None
     candidates.sort()

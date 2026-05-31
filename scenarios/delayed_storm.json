@@ -8,10 +8,7 @@
   "crews": [
     {
       "id": 0,
-<<<<<<< HEAD
       "size": 10,
-=======
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
       "cell": [
         18,
         0
@@ -19,10 +16,7 @@
     },
     {
       "id": 1,
-<<<<<<< HEAD
       "size": 10,
-=======
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
       "cell": [
         0,
         18
@@ -30,10 +24,7 @@
     },
     {
       "id": 2,
-<<<<<<< HEAD
       "size": 10,
-=======
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
       "cell": [
         18,
         18
@@ -41,10 +32,7 @@
     },
     {
       "id": 3,
-<<<<<<< HEAD
       "size": 10,
-=======
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
       "cell": [
         9,
         9
@@ -91,11 +79,7 @@
           15
         ]
       ],
-<<<<<<< HEAD
       "intensity": 35
-=======
-      "intensity": 2
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "cells": [
@@ -136,11 +120,7 @@
           23
         ]
       ],
-<<<<<<< HEAD
       "intensity": 35
-=======
-      "intensity": 2
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "cells": [
@@ -181,11 +161,7 @@
           12
         ]
       ],
-<<<<<<< HEAD
       "intensity": 40,
-=======
-      "intensity": 2,
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
       "ignite_at": 6
     }
   ],
@@ -194,3308 +170,2103 @@
       "x": 6,
       "y": 18,
       "pop": 28,
-<<<<<<< HEAD
       "property_value": 280,
       "spreadability": 52
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 7,
       "y": 17,
       "pop": 42,
-<<<<<<< HEAD
       "property_value": 420,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 4,
       "y": 9,
       "pop": 209,
-<<<<<<< HEAD
       "property_value": 2090,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 3,
       "y": 13,
       "pop": 93,
-<<<<<<< HEAD
       "property_value": 930,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 8,
       "y": 9,
       "pop": 331,
-<<<<<<< HEAD
       "property_value": 3310,
       "spreadability": 66
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 10,
       "y": 6,
       "pop": 247,
-<<<<<<< HEAD
       "property_value": 2470,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 9,
       "y": 8,
       "pop": 296,
-<<<<<<< HEAD
       "property_value": 2960,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 8,
       "y": 18,
       "pop": 28,
-<<<<<<< HEAD
       "property_value": 280,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 11,
       "y": 14,
       "pop": 113,
-<<<<<<< HEAD
       "property_value": 1130,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 13,
       "y": 8,
       "pop": 182,
-<<<<<<< HEAD
       "property_value": 1820,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 6,
       "y": 2,
       "pop": 130,
-<<<<<<< HEAD
       "property_value": 1300,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 7,
       "y": 10,
       "pop": 253,
-<<<<<<< HEAD
       "property_value": 2530,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 5,
       "y": 3,
       "pop": 144,
-<<<<<<< HEAD
       "property_value": 1440,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 12,
       "y": 18,
       "pop": 18,
-<<<<<<< HEAD
       "property_value": 180,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 5,
       "y": 12,
       "pop": 163,
-<<<<<<< HEAD
       "property_value": 1630,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 8,
       "y": 11,
       "pop": 211,
-<<<<<<< HEAD
       "property_value": 2110,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 9,
       "y": 10,
       "pop": 223,
-<<<<<<< HEAD
       "property_value": 2230,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 11,
       "y": 7,
       "pop": 256,
-<<<<<<< HEAD
       "property_value": 2560,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 6,
       "y": 4,
       "pop": 146,
-<<<<<<< HEAD
       "property_value": 1460,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 7,
       "y": 12,
       "pop": 194,
-<<<<<<< HEAD
       "property_value": 1940,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 14,
       "y": 8,
       "pop": 134,
-<<<<<<< HEAD
       "property_value": 1340,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 9,
       "y": 3,
       "pop": 153,
-<<<<<<< HEAD
       "property_value": 1530,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 14,
       "y": 17,
       "pop": 17,
-<<<<<<< HEAD
       "property_value": 170,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 5,
       "y": 14,
       "pop": 93,
-<<<<<<< HEAD
       "property_value": 930,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 9,
       "y": 12,
       "pop": 215,
-<<<<<<< HEAD
       "property_value": 2150,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 11,
       "y": 9,
       "pop": 221,
-<<<<<<< HEAD
       "property_value": 2210,
       "spreadability": 68
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 13,
       "y": 3,
       "pop": 88,
-<<<<<<< HEAD
       "property_value": 880,
       "spreadability": 54
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 6,
       "y": 6,
       "pop": 207,
-<<<<<<< HEAD
       "property_value": 2070,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 7,
       "y": 5,
       "pop": 187,
-<<<<<<< HEAD
       "property_value": 1870,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 7,
       "y": 14,
       "pop": 120,
-<<<<<<< HEAD
       "property_value": 1200,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 14,
       "y": 19,
       "pop": 1,
-<<<<<<< HEAD
       "property_value": 10,
       "spreadability": 52
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 9,
       "y": 14,
       "pop": 130,
-<<<<<<< HEAD
       "property_value": 1300,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 13,
       "y": 5,
       "pop": 146,
-<<<<<<< HEAD
       "property_value": 1460,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 10,
       "y": 15,
       "pop": 101,
-<<<<<<< HEAD
       "property_value": 1010,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 7,
       "y": 7,
       "pop": 289,
-<<<<<<< HEAD
       "property_value": 2890,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 7,
       "y": 16,
       "pop": 70,
-<<<<<<< HEAD
       "property_value": 700,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 12,
       "y": 6,
       "pop": 175,
-<<<<<<< HEAD
       "property_value": 1750,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 14,
       "y": 3,
       "pop": 60,
-<<<<<<< HEAD
       "property_value": 600,
       "spreadability": 55
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 12,
       "y": 15,
       "pop": 75,
-<<<<<<< HEAD
       "property_value": 750,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 5,
       "y": 9,
       "pop": 245,
-<<<<<<< HEAD
       "property_value": 2450,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 4,
       "y": 11,
       "pop": 151,
-<<<<<<< HEAD
       "property_value": 1510,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 9,
       "y": 7,
       "pop": 282,
-<<<<<<< HEAD
       "property_value": 2820,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 13,
       "y": 7,
       "pop": 125,
-<<<<<<< HEAD
       "property_value": 1250,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 13,
       "y": 16,
       "pop": 32,
-<<<<<<< HEAD
       "property_value": 320,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 7,
       "y": 9,
       "pop": 316,
-<<<<<<< HEAD
       "property_value": 3160,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 12,
       "y": 17,
       "pop": 32,
-<<<<<<< HEAD
       "property_value": 320,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 3,
       "y": 14,
       "pop": 63,
-<<<<<<< HEAD
       "property_value": 630,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 5,
       "y": 11,
       "pop": 168,
-<<<<<<< HEAD
       "property_value": 1680,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 9,
       "y": 9,
       "pop": 332,
-<<<<<<< HEAD
       "property_value": 3320,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 8,
       "y": 13,
       "pop": 182,
-<<<<<<< HEAD
       "property_value": 1820,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 10,
       "y": 10,
       "pop": 219,
-<<<<<<< HEAD
       "property_value": 2190,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 13,
       "y": 9,
       "pop": 165,
-<<<<<<< HEAD
       "property_value": 1650,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 13,
       "y": 18,
       "pop": 8,
-<<<<<<< HEAD
       "property_value": 80,
       "spreadability": 54
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 7,
       "y": 11,
       "pop": 240,
-<<<<<<< HEAD
       "property_value": 2400,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 12,
       "y": 10,
       "pop": 170,
-<<<<<<< HEAD
       "property_value": 1700,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 14,
       "y": 7,
       "pop": 138,
-<<<<<<< HEAD
       "property_value": 1380,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 12,
       "y": 19,
       "pop": 5,
-<<<<<<< HEAD
       "property_value": 50,
       "spreadability": 51
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 4,
       "y": 15,
       "pop": 59,
-<<<<<<< HEAD
       "property_value": 590,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 8,
       "y": 6,
       "pop": 259,
-<<<<<<< HEAD
       "property_value": 2590,
       "spreadability": 68
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 8,
       "y": 15,
       "pop": 78,
-<<<<<<< HEAD
       "property_value": 780,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 10,
       "y": 12,
       "pop": 143,
-<<<<<<< HEAD
       "property_value": 1430,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 11,
       "y": 11,
       "pop": 172,
-<<<<<<< HEAD
       "property_value": 1720,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 16,
       "y": 7,
       "pop": 66,
-<<<<<<< HEAD
       "property_value": 660,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 12,
       "y": 3,
       "pop": 113,
-<<<<<<< HEAD
       "property_value": 1130,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 6,
       "y": 17,
       "pop": 37,
-<<<<<<< HEAD
       "property_value": 370,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 12,
       "y": 12,
       "pop": 149,
-<<<<<<< HEAD
       "property_value": 1490,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 8,
       "y": 8,
       "pop": 365,
-<<<<<<< HEAD
       "property_value": 3650,
       "spreadability": 69
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 10,
       "y": 5,
       "pop": 239,
-<<<<<<< HEAD
       "property_value": 2390,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 13,
       "y": 4,
       "pop": 123,
-<<<<<<< HEAD
       "property_value": 1230,
       "spreadability": 55
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 8,
       "y": 17,
       "pop": 50,
-<<<<<<< HEAD
       "property_value": 500,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 10,
       "y": 14,
       "pop": 106,
-<<<<<<< HEAD
       "property_value": 1060,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 11,
       "y": 13,
       "pop": 132,
-<<<<<<< HEAD
       "property_value": 1320,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 6,
       "y": 10,
       "pop": 258,
-<<<<<<< HEAD
       "property_value": 2580,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 12,
       "y": 5,
       "pop": 167,
-<<<<<<< HEAD
       "property_value": 1670,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 14,
       "y": 2,
       "pop": 66,
-<<<<<<< HEAD
       "property_value": 660,
       "spreadability": 55
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 7,
       "y": 18,
       "pop": 25,
-<<<<<<< HEAD
       "property_value": 250,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 12,
       "y": 14,
       "pop": 97,
-<<<<<<< HEAD
       "property_value": 970,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 3,
       "y": 11,
       "pop": 112,
-<<<<<<< HEAD
       "property_value": 1120,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 8,
       "y": 10,
       "pop": 243,
-<<<<<<< HEAD
       "property_value": 2430,
       "spreadability": 68
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 10,
       "y": 7,
       "pop": 219,
-<<<<<<< HEAD
       "property_value": 2190,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 9,
       "y": 18,
       "pop": 27,
-<<<<<<< HEAD
       "property_value": 270,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 11,
       "y": 15,
       "pop": 86,
-<<<<<<< HEAD
       "property_value": 860,
       "spreadability": 55
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 2,
       "y": 12,
       "pop": 96,
-<<<<<<< HEAD
       "property_value": 960,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 6,
       "y": 12,
       "pop": 172,
-<<<<<<< HEAD
       "property_value": 1720,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 4,
       "y": 12,
       "pop": 116,
-<<<<<<< HEAD
       "property_value": 1160,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 10,
       "y": 9,
       "pop": 247,
-<<<<<<< HEAD
       "property_value": 2470,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 9,
       "y": 11,
       "pop": 201,
-<<<<<<< HEAD
       "property_value": 2010,
       "spreadability": 66
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 11,
       "y": 8,
       "pop": 251,
-<<<<<<< HEAD
       "property_value": 2510,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 2,
       "y": 14,
       "pop": 50,
-<<<<<<< HEAD
       "property_value": 500,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 15,
       "y": 8,
       "pop": 86,
-<<<<<<< HEAD
       "property_value": 860,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 6,
       "y": 5,
       "pop": 183,
-<<<<<<< HEAD
       "property_value": 1830,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 6,
       "y": 14,
       "pop": 94,
-<<<<<<< HEAD
       "property_value": 940,
       "spreadability": 55
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 12,
       "y": 9,
       "pop": 193,
-<<<<<<< HEAD
       "property_value": 1930,
       "spreadability": 66
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 8,
       "y": 5,
       "pop": 217,
-<<<<<<< HEAD
       "property_value": 2170,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 9,
       "y": 4,
       "pop": 186,
-<<<<<<< HEAD
       "property_value": 1860,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 5,
       "y": 15,
       "pop": 87,
-<<<<<<< HEAD
       "property_value": 870,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 8,
       "y": 14,
       "pop": 125,
-<<<<<<< HEAD
       "property_value": 1250,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 10,
       "y": 11,
       "pop": 189,
-<<<<<<< HEAD
       "property_value": 1890,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 9,
       "y": 13,
       "pop": 138,
-<<<<<<< HEAD
       "property_value": 1380,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 11,
       "y": 10,
       "pop": 224,
-<<<<<<< HEAD
       "property_value": 2240,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 6,
       "y": 7,
       "pop": 295,
-<<<<<<< HEAD
       "property_value": 2950,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 12,
       "y": 11,
       "pop": 139,
-<<<<<<< HEAD
       "property_value": 1390,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 8,
       "y": 7,
       "pop": 294,
-<<<<<<< HEAD
       "property_value": 2940,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 10,
       "y": 4,
       "pop": 150,
-<<<<<<< HEAD
       "property_value": 1500,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 9,
       "y": 6,
       "pop": 281,
-<<<<<<< HEAD
       "property_value": 2810,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 8,
       "y": 16,
       "pop": 63,
-<<<<<<< HEAD
       "property_value": 630,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 10,
       "y": 13,
       "pop": 136,
-<<<<<<< HEAD
       "property_value": 1360,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 9,
       "y": 15,
       "pop": 92,
-<<<<<<< HEAD
       "property_value": 920,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 6,
       "y": 9,
       "pop": 277,
-<<<<<<< HEAD
       "property_value": 2770,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 7,
       "y": 8,
       "pop": 328,
-<<<<<<< HEAD
       "property_value": 3280,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 25,
       "y": 23,
       "pop": 88,
-<<<<<<< HEAD
       "property_value": 880,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 30,
       "pop": 208,
-<<<<<<< HEAD
       "property_value": 2080,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 32,
       "pop": 143,
-<<<<<<< HEAD
       "property_value": 1430,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 29,
       "pop": 189,
-<<<<<<< HEAD
       "property_value": 1890,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 30,
       "pop": 230,
-<<<<<<< HEAD
       "property_value": 2300,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 34,
       "pop": 88,
-<<<<<<< HEAD
       "property_value": 880,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 33,
       "y": 29,
       "pop": 105,
-<<<<<<< HEAD
       "property_value": 1050,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 35,
       "pop": 29,
-<<<<<<< HEAD
       "property_value": 290,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 32,
       "pop": 116,
-<<<<<<< HEAD
       "property_value": 1160,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 25,
       "y": 34,
       "pop": 54,
-<<<<<<< HEAD
       "property_value": 540,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 22,
       "pop": 61,
-<<<<<<< HEAD
       "property_value": 610,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 31,
       "pop": 141,
-<<<<<<< HEAD
       "property_value": 1410,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 34,
       "y": 30,
       "pop": 80,
-<<<<<<< HEAD
       "property_value": 800,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 32,
       "y": 32,
       "pop": 77,
-<<<<<<< HEAD
       "property_value": 770,
       "spreadability": 55
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 25,
       "pop": 171,
-<<<<<<< HEAD
       "property_value": 1710,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 25,
       "y": 27,
       "pop": 194,
-<<<<<<< HEAD
       "property_value": 1940,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 27,
       "pop": 216,
-<<<<<<< HEAD
       "property_value": 2160,
       "spreadability": 68
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 24,
       "pop": 105,
-<<<<<<< HEAD
       "property_value": 1050,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 23,
       "y": 29,
       "pop": 96,
-<<<<<<< HEAD
       "property_value": 960,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 29,
       "pop": 231,
-<<<<<<< HEAD
       "property_value": 2310,
       "spreadability": 69
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 21,
       "pop": 33,
-<<<<<<< HEAD
       "property_value": 330,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 34,
       "pop": 61,
-<<<<<<< HEAD
       "property_value": 610,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 33,
       "y": 33,
       "pop": 55,
-<<<<<<< HEAD
       "property_value": 550,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 30,
       "pop": 119,
-<<<<<<< HEAD
       "property_value": 1190,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 25,
       "y": 29,
       "pop": 165,
-<<<<<<< HEAD
       "property_value": 1650,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 20,
       "pop": 38,
-<<<<<<< HEAD
       "property_value": 380,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 29,
       "pop": 233,
-<<<<<<< HEAD
       "property_value": 2330,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 26,
       "pop": 149,
-<<<<<<< HEAD
       "property_value": 1490,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 34,
       "y": 25,
       "pop": 55,
-<<<<<<< HEAD
       "property_value": 550,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 18,
       "pop": 4,
-<<<<<<< HEAD
       "property_value": 40,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 23,
       "y": 31,
       "pop": 100,
-<<<<<<< HEAD
       "property_value": 1000,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 22,
       "pop": 88,
-<<<<<<< HEAD
       "property_value": 880,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 31,
       "pop": 143,
-<<<<<<< HEAD
       "property_value": 1430,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 32,
       "y": 27,
       "pop": 115,
-<<<<<<< HEAD
       "property_value": 1150,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 27,
       "pop": 196,
-<<<<<<< HEAD
       "property_value": 1960,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 33,
       "y": 26,
       "pop": 83,
-<<<<<<< HEAD
       "property_value": 830,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 35,
       "y": 32,
       "pop": 27,
-<<<<<<< HEAD
       "property_value": 270,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 22,
       "pop": 88,
-<<<<<<< HEAD
       "property_value": 880,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 31,
       "pop": 171,
-<<<<<<< HEAD
       "property_value": 1710,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 28,
       "pop": 185,
-<<<<<<< HEAD
       "property_value": 1850,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 23,
       "y": 33,
       "pop": 49,
-<<<<<<< HEAD
       "property_value": 490,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 24,
       "pop": 151,
-<<<<<<< HEAD
       "property_value": 1510,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 32,
       "pop": 150,
-<<<<<<< HEAD
       "property_value": 1500,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 29,
       "pop": 203,
-<<<<<<< HEAD
       "property_value": 2030,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 33,
       "y": 28,
       "pop": 99,
-<<<<<<< HEAD
       "property_value": 990,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 24,
       "pop": 121,
-<<<<<<< HEAD
       "property_value": 1210,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 33,
       "pop": 94,
-<<<<<<< HEAD
       "property_value": 940,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 30,
       "pop": 134,
-<<<<<<< HEAD
       "property_value": 1340,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 26,
       "pop": 173,
-<<<<<<< HEAD
       "property_value": 1730,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 18,
       "pop": 1,
-<<<<<<< HEAD
       "property_value": 10,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 34,
       "pop": 77,
-<<<<<<< HEAD
       "property_value": 770,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 25,
       "y": 26,
       "pop": 142,
-<<<<<<< HEAD
       "property_value": 1420,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 32,
       "y": 34,
       "pop": 55,
-<<<<<<< HEAD
       "property_value": 550,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 26,
       "pop": 204,
-<<<<<<< HEAD
       "property_value": 2040,
       "spreadability": 66
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 23,
       "pop": 87,
-<<<<<<< HEAD
       "property_value": 870,
       "spreadability": 55
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 23,
       "y": 19,
       "pop": 2,
-<<<<<<< HEAD
       "property_value": 20,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 27,
       "pop": 240,
-<<<<<<< HEAD
       "property_value": 2400,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 24,
       "pop": 110,
-<<<<<<< HEAD
       "property_value": 1100,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 19,
       "pop": 15,
-<<<<<<< HEAD
       "property_value": 150,
       "spreadability": 52
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 29,
       "pop": 240,
-<<<<<<< HEAD
       "property_value": 2400,
       "spreadability": 68
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 28,
       "pop": 218,
-<<<<<<< HEAD
       "property_value": 2180,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 25,
       "pop": 147,
-<<<<<<< HEAD
       "property_value": 1470,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 23,
       "y": 30,
       "pop": 91,
-<<<<<<< HEAD
       "property_value": 910,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 30,
       "pop": 192,
-<<<<<<< HEAD
       "property_value": 1920,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 29,
       "pop": 276,
-<<<<<<< HEAD
       "property_value": 2760,
       "spreadability": 68
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 32,
       "y": 29,
       "pop": 143,
-<<<<<<< HEAD
       "property_value": 1430,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 34,
       "pop": 51,
-<<<<<<< HEAD
       "property_value": 510,
       "spreadability": 52
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 34,
       "y": 29,
       "pop": 93,
-<<<<<<< HEAD
       "property_value": 930,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 23,
       "pop": 91,
-<<<<<<< HEAD
       "property_value": 910,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 22,
       "pop": 74,
-<<<<<<< HEAD
       "property_value": 740,
       "spreadability": 54
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 32,
       "pop": 152,
-<<<<<<< HEAD
       "property_value": 1520,
       "spreadability": 66
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 28,
       "pop": 180,
-<<<<<<< HEAD
       "property_value": 1800,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 24,
       "pop": 133,
-<<<<<<< HEAD
       "property_value": 1330,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 23,
       "pop": 115,
-<<<<<<< HEAD
       "property_value": 1150,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 33,
       "pop": 103,
-<<<<<<< HEAD
       "property_value": 1030,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 22,
       "y": 29,
       "pop": 80,
-<<<<<<< HEAD
       "property_value": 800,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 34,
       "y": 31,
       "pop": 64,
-<<<<<<< HEAD
       "property_value": 640,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 25,
       "pop": 202,
-<<<<<<< HEAD
       "property_value": 2020,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 24,
       "pop": 156,
-<<<<<<< HEAD
       "property_value": 1560,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 21,
       "pop": 45,
-<<<<<<< HEAD
       "property_value": 450,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 33,
       "pop": 123,
-<<<<<<< HEAD
       "property_value": 1230,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 20,
       "pop": 16,
-<<<<<<< HEAD
       "property_value": 160,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 32,
       "y": 33,
       "pop": 65,
-<<<<<<< HEAD
       "property_value": 650,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 33,
       "y": 32,
       "pop": 80,
-<<<<<<< HEAD
       "property_value": 800,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 29,
       "pop": 145,
-<<<<<<< HEAD
       "property_value": 1450,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 35,
       "y": 29,
       "pop": 50,
-<<<<<<< HEAD
       "property_value": 500,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 25,
       "pop": 179,
-<<<<<<< HEAD
       "property_value": 1790,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 27,
       "pop": 207,
-<<<<<<< HEAD
       "property_value": 2070,
       "spreadability": 69
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 26,
       "pop": 205,
-<<<<<<< HEAD
       "property_value": 2050,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 23,
       "pop": 101,
-<<<<<<< HEAD
       "property_value": 1010,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 32,
       "y": 26,
       "pop": 126,
-<<<<<<< HEAD
       "property_value": 1260,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 22,
       "pop": 46,
-<<<<<<< HEAD
       "property_value": 460,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 31,
       "pop": 124,
-<<<<<<< HEAD
       "property_value": 1240,
       "spreadability": 55
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 28,
       "pop": 203,
-<<<<<<< HEAD
       "property_value": 2030,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 25,
       "y": 30,
       "pop": 149,
-<<<<<<< HEAD
       "property_value": 1490,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 27,
       "pop": 186,
-<<<<<<< HEAD
       "property_value": 1860,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 28,
       "pop": 304,
-<<<<<<< HEAD
       "property_value": 3040,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 25,
       "pop": 175,
-<<<<<<< HEAD
       "property_value": 1750,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 32,
       "y": 28,
       "pop": 161,
-<<<<<<< HEAD
       "property_value": 1610,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 33,
       "y": 27,
       "pop": 120,
-<<<<<<< HEAD
       "property_value": 1200,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 23,
       "y": 4,
       "pop": 65,
-<<<<<<< HEAD
       "property_value": 650,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 4,
       "pop": 112,
-<<<<<<< HEAD
       "property_value": 1120,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 3,
       "pop": 117,
-<<<<<<< HEAD
       "property_value": 1170,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 13,
       "pop": 88,
-<<<<<<< HEAD
       "property_value": 880,
       "spreadability": 68
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 9,
       "pop": 215,
-<<<<<<< HEAD
       "property_value": 2150,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 5,
       "pop": 144,
-<<<<<<< HEAD
       "property_value": 1440,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 22,
       "y": 10,
       "pop": 60,
-<<<<<<< HEAD
       "property_value": 600,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 6,
       "pop": 183,
-<<<<<<< HEAD
       "property_value": 1830,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 5,
       "pop": 185,
-<<<<<<< HEAD
       "property_value": 1850,
       "spreadability": 70
-=======
-      "catchability": 4
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 19,
       "y": 2,
       "pop": 1,
-<<<<<<< HEAD
       "property_value": 10,
       "spreadability": 54
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 2,
       "pop": 78,
-<<<<<<< HEAD
       "property_value": 780,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 32,
       "y": 5,
       "pop": 112,
-<<<<<<< HEAD
       "property_value": 1120,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 10,
       "pop": 108,
-<<<<<<< HEAD
       "property_value": 1080,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 7,
       "pop": 203,
-<<<<<<< HEAD
       "property_value": 2030,
       "spreadability": 72
-=======
-      "catchability": 4
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 21,
       "y": 2,
       "pop": 11,
-<<<<<<< HEAD
       "property_value": 110,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 7,
       "pop": 218,
-<<<<<<< HEAD
       "property_value": 2180,
       "spreadability": 72
-=======
-      "catchability": 4
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 19,
       "y": 4,
       "pop": 7,
-<<<<<<< HEAD
       "property_value": 70,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 4,
       "pop": 135,
-<<<<<<< HEAD
       "property_value": 1350,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 12,
       "pop": 86,
-<<<<<<< HEAD
       "property_value": 860,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 25,
       "y": 11,
       "pop": 114,
-<<<<<<< HEAD
       "property_value": 1140,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 21,
       "y": 4,
       "pop": 29,
-<<<<<<< HEAD
       "property_value": 290,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 8,
       "pop": 180,
-<<<<<<< HEAD
       "property_value": 1800,
       "spreadability": 71
-=======
-      "catchability": 4
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 22,
       "y": 5,
       "pop": 69,
-<<<<<<< HEAD
       "property_value": 690,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 9,
       "pop": 206,
-<<<<<<< HEAD
       "property_value": 2060,
       "spreadability": 70
-=======
-      "catchability": 4
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 19,
       "y": 6,
       "pop": 15,
-<<<<<<< HEAD
       "property_value": 150,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 6,
       "pop": 180,
-<<<<<<< HEAD
       "property_value": 1800,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 5,
       "pop": 107,
-<<<<<<< HEAD
       "property_value": 1070,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 25,
       "y": 4,
       "pop": 105,
-<<<<<<< HEAD
       "property_value": 1050,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 11,
       "pop": 169,
-<<<<<<< HEAD
       "property_value": 1690,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 13,
       "pop": 115,
-<<<<<<< HEAD
       "property_value": 1150,
       "spreadability": 66
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 22,
       "y": 7,
       "pop": 88,
-<<<<<<< HEAD
       "property_value": 880,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 2,
       "pop": 77,
-<<<<<<< HEAD
       "property_value": 770,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 11,
       "pop": 150,
-<<<<<<< HEAD
       "property_value": 1500,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 32,
       "y": 2,
       "pop": 45,
-<<<<<<< HEAD
       "property_value": 450,
       "spreadability": 56
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 32,
       "y": 11,
       "pop": 86,
-<<<<<<< HEAD
       "property_value": 860,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 7,
       "pop": 112,
-<<<<<<< HEAD
       "property_value": 1120,
       "spreadability": 66
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 4,
       "pop": 98,
-<<<<<<< HEAD
       "property_value": 980,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 25,
       "y": 6,
       "pop": 165,
-<<<<<<< HEAD
       "property_value": 1650,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 3,
       "pop": 84,
-<<<<<<< HEAD
       "property_value": 840,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 20,
       "y": 3,
       "pop": 10,
-<<<<<<< HEAD
       "property_value": 100,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 12,
       "pop": 98,
-<<<<<<< HEAD
       "property_value": 980,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 22,
       "y": 9,
       "pop": 76,
-<<<<<<< HEAD
       "property_value": 760,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 21,
       "y": 11,
       "pop": 47,
-<<<<<<< HEAD
       "property_value": 470,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 23,
       "y": 8,
       "pop": 120,
-<<<<<<< HEAD
       "property_value": 1200,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 4,
       "pop": 137,
-<<<<<<< HEAD
       "property_value": 1370,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 33,
       "y": 3,
       "pop": 45,
-<<<<<<< HEAD
       "property_value": 450,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 9,
       "pop": 109,
-<<<<<<< HEAD
       "property_value": 1090,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 6,
       "pop": 198,
-<<<<<<< HEAD
       "property_value": 1980,
       "spreadability": 70
-=======
-      "catchability": 4
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 20,
       "y": 5,
       "pop": 21,
-<<<<<<< HEAD
       "property_value": 210,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 5,
       "pop": 112,
-<<<<<<< HEAD
       "property_value": 1120,
       "spreadability": 69
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 23,
       "y": 10,
       "pop": 90,
-<<<<<<< HEAD
       "property_value": 900,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 10,
       "pop": 227,
-<<<<<<< HEAD
       "property_value": 2270,
       "spreadability": 62
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 2,
       "pop": 41,
-<<<<<<< HEAD
       "property_value": 410,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 25,
       "y": 1,
       "pop": 33,
-<<<<<<< HEAD
       "property_value": 330,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 25,
       "y": 10,
       "pop": 170,
-<<<<<<< HEAD
       "property_value": 1700,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 1,
       "pop": 44,
-<<<<<<< HEAD
       "property_value": 440,
       "spreadability": 66
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 10,
       "pop": 202,
-<<<<<<< HEAD
       "property_value": 2020,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 22,
       "y": 4,
       "pop": 54,
-<<<<<<< HEAD
       "property_value": 540,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 23,
       "y": 3,
       "pop": 59,
-<<<<<<< HEAD
       "property_value": 590,
       "spreadability": 66
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 3,
       "pop": 117,
-<<<<<<< HEAD
       "property_value": 1170,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 8,
       "pop": 177,
-<<<<<<< HEAD
       "property_value": 1770,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 24,
       "y": 4,
       "pop": 101,
-<<<<<<< HEAD
       "property_value": 1010,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 25,
       "y": 12,
       "pop": 85,
-<<<<<<< HEAD
       "property_value": 850,
       "spreadability": 57
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 3,
       "pop": 118,
-<<<<<<< HEAD
       "property_value": 1180,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 9,
       "pop": 136,
-<<<<<<< HEAD
       "property_value": 1360,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 5,
       "pop": 150,
-<<<<<<< HEAD
       "property_value": 1500,
       "spreadability": 68
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 13,
       "pop": 103,
-<<<<<<< HEAD
       "property_value": 1030,
       "spreadability": 59
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 10,
       "pop": 192,
-<<<<<<< HEAD
       "property_value": 1920,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 5,
       "pop": 135,
-<<<<<<< HEAD
       "property_value": 1350,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 7,
       "pop": 256,
-<<<<<<< HEAD
       "property_value": 2560,
       "spreadability": 72
-=======
-      "catchability": 4
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 6,
       "pop": 175,
-<<<<<<< HEAD
       "property_value": 1750,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 19,
       "y": 3,
       "pop": 2,
-<<<<<<< HEAD
       "property_value": 20,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 3,
       "pop": 99,
-<<<<<<< HEAD
       "property_value": 990,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 8,
       "pop": 224,
-<<<<<<< HEAD
       "property_value": 2240,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 20,
       "y": 4,
       "pop": 16,
-<<<<<<< HEAD
       "property_value": 160,
       "spreadability": 58
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 9,
       "pop": 244,
-<<<<<<< HEAD
       "property_value": 2440,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 28,
       "y": 8,
       "pop": 266,
-<<<<<<< HEAD
       "property_value": 2660,
       "spreadability": 71
-=======
-      "catchability": 4
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 5,
       "pop": 123,
-<<<<<<< HEAD
       "property_value": 1230,
       "spreadability": 69
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 32,
       "y": 8,
       "pop": 153,
-<<<<<<< HEAD
       "property_value": 1530,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 10,
       "pop": 152,
-<<<<<<< HEAD
       "property_value": 1520,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 9,
       "pop": 263,
-<<<<<<< HEAD
       "property_value": 2630,
       "spreadability": 65
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 20,
       "y": 6,
       "pop": 25,
-<<<<<<< HEAD
       "property_value": 250,
       "spreadability": 61
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 31,
       "y": 6,
       "pop": 162,
-<<<<<<< HEAD
       "property_value": 1620,
       "spreadability": 66
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 21,
       "y": 5,
       "pop": 43,
-<<<<<<< HEAD
       "property_value": 430,
       "spreadability": 63
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 23,
       "y": 11,
       "pop": 75,
-<<<<<<< HEAD
       "property_value": 750,
       "spreadability": 60
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 27,
       "y": 11,
       "pop": 179,
-<<<<<<< HEAD
       "property_value": 1790,
       "spreadability": 64
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 30,
       "y": 7,
       "pop": 201,
-<<<<<<< HEAD
       "property_value": 2010,
       "spreadability": 68
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 32,
       "y": 10,
       "pop": 99,
-<<<<<<< HEAD
       "property_value": 990,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 29,
       "y": 2,
       "pop": 82,
-<<<<<<< HEAD
       "property_value": 820,
       "spreadability": 67
-=======
-      "catchability": 3
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     },
     {
       "x": 26,
       "y": 12,
       "pop": 137,
-<<<<<<< HEAD
       "property_value": 1370,
       "spreadability": 58
     }
   ],
-  "baseline_donothing": 8616944,
-  "baseline_greedy": 8781130
+  "baseline_donothing": 9428048,
+  "baseline_greedy": 9651870
 }
-=======
-      "catchability": 3
-    }
-  ],
-  "baseline_donothing": -11228808,
-  "baseline_greedy": -10525932
-}
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850

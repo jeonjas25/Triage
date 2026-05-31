@@ -16,7 +16,8 @@
       "Bash(python -m http.server 8080)",
       "Bash(echo \"Server PID: $!\")",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/)",
-      "Bash(curl *)"
+      "Bash(curl *)",
+      "Bash(python3 *)"
     ]
   }
 }

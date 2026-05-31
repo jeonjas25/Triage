@@ -92,6 +92,7 @@ class TriageEnv(BaseEnv):
         self._crews = [
             Crew(
                 id=c["id"],
+                size=c.get("size", 10),
                 cell=list(c["cell"]),
                 actions_per_turn=actions_per_crew,
             )
@@ -201,12 +202,10 @@ class TriageEnv(BaseEnv):
             if cell.on_fire:
                 c["fire"] = 1
                 c["intensity"] = cell.intensity
-            if cell.spreadability != 50:   # 50 is the grid default; omit noise
-                c["spread"] = cell.spreadability
+            if cell.catchability != 3:   # 3 is the grid default; omit noise
+                c["catch"] = cell.catchability
             if cell.pop:
                 c["pop"] = cell.pop
-            if cell.property_remaining:
-                c["prop"] = cell.property_remaining
             cells.append(c)
 
         return {

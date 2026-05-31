@@ -19,16 +19,11 @@ def compute_tick_casualties(grid: "Grid") -> int:
     total = 0
     for cell in grid.cells.values():
         if cell.on_fire and cell.pop > 0:
-<<<<<<< HEAD
             rate = (cell.intensity / 100.0) * 0.05
             killed = max(1, round(cell.pop * rate))
             killed = min(killed, cell.pop)
             cell.pop -= killed
             total += killed
-=======
-            share = cell.intensity / 5.0
-            total += round(cell.pop * share)
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
     return total
 
 

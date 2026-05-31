@@ -19,11 +19,11 @@ class FireModel:
         """
         Advance every burning cell one tick.
         active_timers is mutated in place.
-        Returns (newly_ignited_count, property_lost_this_tick).
+        Returns newly_ignited_count.
 
         Spread uses combined probability across all burning neighbors:
             P(ignite) = 1 - prod(1 - p_i)  for each burning neighbor i
-            p_i = (target.spreadability/100) * (source.intensity/100)
+            p_i = (target.catchability/5) * (source.intensity/100)
         A single pre-rolled value per cell is compared against P(ignite),
         so the outcome is deterministic for identical seeds regardless of
         how many neighbors are burning or in what order they are visited.
@@ -36,12 +36,6 @@ class FireModel:
         for cell in burning:
             increment = schedule_t["intensity_growth"].get((cell.x, cell.y), 0)
             cell.intensity = min(100, cell.intensity + increment)
-            if cell.intensity > cell.peak_intensity:
-                delta_peak = cell.intensity - cell.peak_intensity
-                cell.peak_intensity = cell.intensity
-                prop_delta = cell.property_value * delta_peak // 100
-                cell.property_remaining = max(0, cell.property_remaining - prop_delta)
-                property_lost += prop_delta
 
         # 2. Tick burn timers; extinguish cells whose timer hits zero
         for cell in burning:
@@ -63,7 +57,7 @@ class FireModel:
                 if nb.on_fire:
                     continue
                 key = (nb.x, nb.y)
-                p_src = (nb.spreadability / 100.0) * (src.intensity / 100.0)
+                p_src = (nb.catchability / 5.0) * (src.intensity / 100.0)
                 if key not in p_no_ignite:
                     p_no_ignite[key] = 1.0
                 p_no_ignite[key] *= (1.0 - p_src)

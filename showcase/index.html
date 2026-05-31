@@ -461,15 +461,8 @@ ctx.scale(dpr, dpr);
 
 // ── Color helpers ─────────────────────────────────────────────────────────────
 function fireFill(intensity) {
-<<<<<<< HEAD
   const t = Math.min(1, intensity / 100);
   return `rgb(255,${Math.round(136 * (1 - t))},0)`;
-=======
-  const t = Math.min(1, intensity / 5);
-  const r = 255;
-  const g = Math.round(140 * (1 - t));
-  return `rgb(${r},${g},0)`;
->>>>>>> f2a8b761c1202bab0e0f5ab68738e740fe973850
 }
 
 function popFill(pop, maxPop) {

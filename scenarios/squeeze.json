@@ -3,11 +3,7 @@
   "description": "Three fast-spreading fronts, small crews with fewer action points. The budget squeeze is hardest here \u2014 saving two of three towns is the ceiling.",
   "grid_width": 32,
   "grid_height": 32,
-  "description": "Three fast-spreading fronts, small crews with fewer action points. The budget squeeze is hardest here \u2014 saving two of three towns is the ceiling.",
-  "grid_width": 32,
-  "grid_height": 32,
   "max_turns": 22,
-  "actions_per_crew": 6,
   "actions_per_crew": 6,
   "crews": [
     {
@@ -2266,6 +2262,6 @@
       "spreadability": 62
     }
   ],
-  "baseline_donothing": 9290415,
-  "baseline_greedy": 9433882
+  "baseline_donothing": 9791472,
+  "baseline_greedy": 9827034
 }
