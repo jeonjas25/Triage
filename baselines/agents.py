@@ -45,11 +45,11 @@ class GreedyAgent:
     Priority per action:
       1. Evacuate — if standing on a burning cell with significant population,
          carry people to the nearest non-burning neighbor. Each evacuate action
-         can save up to crew_size*5 people immediately.
+         moves a fixed number of people immediately.
       2. Suppress — if standing on or adjacent to a burning cell, reduce intensity.
          Prefer the burning cell with the most population at risk.
       3. Prep — if standing on a non-burning cell that is adjacent to fire and has
-         high spreadability, reduce fuel load to slow the advance.
+         high catchability, reduce fuel load to slow the advance.
       4. Move — step toward the highest-value unaddressed fire front.
 
     Crews are given distinct target fires so they don't all pile onto one cell.

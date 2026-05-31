@@ -76,7 +76,6 @@ class TriageEnv(BaseEnv):
         self._baseline_donothing: int = 0
         self._baseline_greedy: int = 1
         self._scenario: dict[str, Any] = _default_scenario()
-        self._next_crew_id: list[int] = [0]  # mutable box so apply_commands can increment
 
     def reset(self, seed: int | None = None, **params: Any) -> dict[str, Any]:
         rng = random.Random(seed)
@@ -92,13 +91,11 @@ class TriageEnv(BaseEnv):
         self._crews = [
             Crew(
                 id=c["id"],
-                size=c.get("size", 10),
                 cell=list(c["cell"]),
                 actions_per_turn=actions_per_crew,
             )
             for c in scenario.get("crews", [])
         ]
-        self._next_crew_id = [max((c["id"] for c in scenario.get("crews", [])), default=-1) + 1]
 
         assert self._grid is not None
         self._pending_clusters = []
@@ -147,8 +144,7 @@ class TriageEnv(BaseEnv):
         self._pending_clusters = still_pending
 
         commands = action.get("commands", []) if isinstance(action, dict) else []
-        illegal, new_crews = apply_commands(commands, self._crews, self._grid, self._next_crew_id)
-        self._crews.extend(new_crews)
+        illegal = apply_commands(commands, self._crews, self._grid)
         self._illegal += illegal
 
         schedule_t = self._schedule[self._turn]

@@ -8,7 +8,6 @@
   "crews": [
     {
       "id": 0,
-      "size": 10,
       "cell": [
         16,
         0
@@ -16,7 +15,6 @@
     },
     {
       "id": 1,
-      "size": 10,
       "cell": [
         16,
         31
@@ -24,7 +22,6 @@
     },
     {
       "id": 2,
-      "size": 10,
       "cell": [
         16,
         16
@@ -32,7 +29,6 @@
     },
     {
       "id": 3,
-      "size": 10,
       "cell": [
         8,
         8
@@ -79,7 +75,7 @@
           15
         ]
       ],
-      "intensity": 40
+      "intensity": 2
     },
     {
       "cells": [
@@ -120,7 +116,7 @@
           15
         ]
       ],
-      "intensity": 40
+      "intensity": 2
     }
   ],
   "cells": [
@@ -128,2103 +124,1803 @@
       "x": 4,
       "y": 0,
       "pop": 8,
-      "property_value": 80,
-      "spreadability": 53
+      "catchability": 3
     },
     {
       "x": 4,
       "y": 9,
       "pop": 116,
-      "property_value": 1160,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 5,
       "y": 1,
       "pop": 22,
-      "property_value": 220,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 3,
       "y": 13,
       "pop": 62,
-      "property_value": 620,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 8,
       "y": 9,
       "pop": 232,
-      "property_value": 2320,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 10,
       "y": 6,
       "pop": 209,
-      "property_value": 2090,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 9,
       "y": 8,
       "pop": 299,
-      "property_value": 2990,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 11,
       "y": 5,
       "pop": 133,
-      "property_value": 1330,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 0,
       "y": 5,
       "pop": 12,
-      "property_value": 120,
-      "spreadability": 51
+      "catchability": 3
     },
     {
       "x": 11,
       "y": 14,
       "pop": 120,
-      "property_value": 1200,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 6,
       "y": 2,
       "pop": 58,
-      "property_value": 580,
-      "spreadability": 55
+      "catchability": 3
     },
     {
       "x": 7,
       "y": 1,
       "pop": 40,
-      "property_value": 400,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 7,
       "y": 10,
       "pop": 182,
-      "property_value": 1820,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 4,
       "y": 2,
       "pop": 31,
-      "property_value": 310,
-      "spreadability": 55
+      "catchability": 3
     },
     {
       "x": 3,
       "y": 6,
       "pop": 76,
-      "property_value": 760,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 5,
       "y": 3,
       "pop": 61,
-      "property_value": 610,
-      "spreadability": 53
+      "catchability": 3
     },
     {
       "x": 8,
       "y": 2,
       "pop": 57,
-      "property_value": 570,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 9,
       "y": 1,
       "pop": 49,
-      "property_value": 490,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 5,
       "y": 12,
       "pop": 108,
-      "property_value": 1080,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 8,
       "y": 11,
       "pop": 198,
-      "property_value": 1980,
-      "spreadability": 68
+      "catchability": 3
     },
     {
       "x": 9,
       "y": 10,
       "pop": 260,
-      "property_value": 2600,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 11,
       "y": 7,
       "pop": 184,
-      "property_value": 1840,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 2,
       "y": 4,
       "pop": 33,
-      "property_value": 330,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 0,
       "y": 7,
       "pop": 24,
-      "property_value": 240,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 1,
       "y": 8,
       "pop": 36,
-      "property_value": 360,
-      "spreadability": 53
+      "catchability": 3
     },
     {
       "x": 13,
       "y": 10,
       "pop": 135,
-      "property_value": 1350,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 6,
       "y": 4,
       "pop": 111,
-      "property_value": 1110,
-      "spreadability": 55
+      "catchability": 3
     },
     {
       "x": 7,
       "y": 3,
       "pop": 76,
-      "property_value": 760,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 15,
       "y": 16,
       "pop": 23,
-      "property_value": 230,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 6,
       "y": 13,
       "pop": 103,
-      "property_value": 1030,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 3,
       "y": 8,
       "pop": 80,
-      "property_value": 800,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 5,
       "y": 5,
       "pop": 103,
-      "property_value": 1030,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 14,
       "y": 8,
       "pop": 111,
-      "property_value": 1110,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 8,
       "y": 4,
       "pop": 127,
-      "property_value": 1270,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 9,
       "y": 3,
       "pop": 90,
-      "property_value": 900,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 11,
       "y": 9,
       "pop": 194,
-      "property_value": 1940,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 0,
       "y": 9,
       "pop": 21,
-      "property_value": 210,
-      "spreadability": 53
+      "catchability": 3
     },
     {
       "x": 13,
       "y": 12,
       "pop": 123,
-      "property_value": 1230,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 1,
       "y": 10,
       "pop": 35,
-      "property_value": 350,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 6,
       "y": 6,
       "pop": 123,
-      "property_value": 1230,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 15,
       "y": 9,
       "pop": 80,
-      "property_value": 800,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 7,
       "y": 5,
       "pop": 134,
-      "property_value": 1340,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 3,
       "y": 1,
       "pop": 9,
-      "property_value": 90,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 3,
       "y": 10,
       "pop": 101,
-      "property_value": 1010,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 5,
       "y": 7,
       "pop": 133,
-      "property_value": 1330,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 14,
       "y": 10,
       "pop": 99,
-      "property_value": 990,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 9,
       "y": 5,
       "pop": 147,
-      "property_value": 1470,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 0,
       "y": 2,
       "pop": 1,
-      "property_value": 10,
-      "spreadability": 51
+      "catchability": 3
     },
     {
       "x": 1,
       "y": 3,
       "pop": 9,
-      "property_value": 90,
-      "spreadability": 51
+      "catchability": 3
     },
     {
       "x": 10,
       "y": 15,
       "pop": 85,
-      "property_value": 850,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 13,
       "y": 14,
       "pop": 78,
-      "property_value": 780,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 15,
       "y": 11,
       "pop": 71,
-      "property_value": 710,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 7,
       "y": 7,
       "pop": 160,
-      "property_value": 1600,
-      "spreadability": 66
+      "catchability": 3
     },
     {
       "x": 12,
       "y": 6,
       "pop": 152,
-      "property_value": 1520,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 3,
       "y": 3,
       "pop": 38,
-      "property_value": 380,
-      "spreadability": 52
+      "catchability": 3
     },
     {
       "x": 17,
       "y": 11,
       "pop": 45,
-      "property_value": 450,
-      "spreadability": 54
+      "catchability": 3
     },
     {
       "x": 4,
       "y": 11,
       "pop": 102,
-      "property_value": 1020,
-      "spreadability": 55
+      "catchability": 3
     },
     {
       "x": 5,
       "y": 9,
       "pop": 154,
-      "property_value": 1540,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 9,
       "y": 7,
       "pop": 233,
-      "property_value": 2330,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 10,
       "y": 8,
       "pop": 255,
-      "property_value": 2550,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 1,
       "y": 5,
       "pop": 27,
-      "property_value": 270,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 13,
       "y": 7,
       "pop": 115,
-      "property_value": 1150,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 6,
       "y": 1,
       "pop": 29,
-      "property_value": 290,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 16,
       "y": 12,
       "pop": 56,
-      "property_value": 560,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 7,
       "y": 9,
       "pop": 238,
-      "property_value": 2380,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 12,
       "y": 8,
       "pop": 147,
-      "property_value": 1470,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 3,
       "y": 5,
       "pop": 64,
-      "property_value": 640,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 5,
       "y": 2,
       "pop": 48,
-      "property_value": 480,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 4,
       "y": 4,
       "pop": 68,
-      "property_value": 680,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 14,
       "y": 14,
       "pop": 72,
-      "property_value": 720,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 5,
       "y": 11,
       "pop": 112,
-      "property_value": 1120,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 4,
       "y": 13,
       "pop": 82,
-      "property_value": 820,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 3,
       "y": 14,
       "pop": 44,
-      "property_value": 440,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 9,
       "y": 9,
       "pop": 316,
-      "property_value": 3160,
-      "spreadability": 70
+      "catchability": 4
     },
     {
       "x": 10,
       "y": 1,
       "pop": 35,
-      "property_value": 350,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 8,
       "y": 13,
       "pop": 147,
-      "property_value": 1470,
-      "spreadability": 66
+      "catchability": 3
     },
     {
       "x": 10,
       "y": 10,
       "pop": 280,
-      "property_value": 2800,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 1,
       "y": 7,
       "pop": 35,
-      "property_value": 350,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 2,
       "y": 6,
       "pop": 59,
-      "property_value": 590,
-      "spreadability": 55
+      "catchability": 3
     },
     {
       "x": 7,
       "y": 2,
       "pop": 58,
-      "property_value": 580,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 7,
       "y": 11,
       "pop": 224,
-      "property_value": 2240,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 6,
       "y": 15,
       "pop": 67,
-      "property_value": 670,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 12,
       "y": 10,
       "pop": 176,
-      "property_value": 1760,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 3,
       "y": 7,
       "pop": 78,
-      "property_value": 780,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 5,
       "y": 4,
       "pop": 80,
-      "property_value": 800,
-      "spreadability": 54
+      "catchability": 3
     },
     {
       "x": 9,
       "y": 2,
       "pop": 69,
-      "property_value": 690,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 14,
       "y": 16,
       "pop": 36,
-      "property_value": 360,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 8,
       "y": 6,
       "pop": 179,
-      "property_value": 1790,
-      "spreadability": 66
+      "catchability": 3
     },
     {
       "x": 10,
       "y": 3,
       "pop": 94,
-      "property_value": 940,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 10,
       "y": 12,
       "pop": 163,
-      "property_value": 1630,
-      "spreadability": 68
+      "catchability": 3
     },
     {
       "x": 13,
       "y": 11,
       "pop": 146,
-      "property_value": 1460,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 11,
       "y": 11,
       "pop": 219,
-      "property_value": 2190,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 2,
       "y": 8,
       "pop": 57,
-      "property_value": 570,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 16,
       "y": 7,
       "pop": 58,
-      "property_value": 580,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 7,
       "y": 4,
       "pop": 101,
-      "property_value": 1010,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 12,
       "y": 12,
       "pop": 120,
-      "property_value": 1200,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 5,
       "y": 6,
       "pop": 134,
-      "property_value": 1340,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 8,
       "y": 8,
       "pop": 219,
-      "property_value": 2190,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 10,
       "y": 5,
       "pop": 143,
-      "property_value": 1430,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 13,
       "y": 4,
       "pop": 81,
-      "property_value": 810,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 0,
       "y": 4,
       "pop": 8,
-      "property_value": 80,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 2,
       "y": 1,
       "pop": 4,
-      "property_value": 40,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 16,
       "y": 9,
       "pop": 64,
-      "property_value": 640,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 6,
       "y": 10,
       "pop": 197,
-      "property_value": 1970,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 12,
       "y": 5,
       "pop": 105,
-      "property_value": 1050,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 3,
       "y": 2,
       "pop": 19,
-      "property_value": 190,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 12,
       "y": 14,
       "pop": 112,
-      "property_value": 1120,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 3,
       "y": 11,
       "pop": 71,
-      "property_value": 710,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 4,
       "y": 10,
       "pop": 127,
-      "property_value": 1270,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 8,
       "y": 10,
       "pop": 228,
-      "property_value": 2280,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 1,
       "y": 4,
       "pop": 20,
-      "property_value": 200,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 11,
       "y": 6,
       "pop": 156,
-      "property_value": 1560,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 2,
       "y": 3,
       "pop": 19,
-      "property_value": 190,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 2,
       "y": 12,
       "pop": 55,
-      "property_value": 550,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 6,
       "y": 3,
       "pop": 75,
-      "property_value": 750,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 12,
       "y": 7,
       "pop": 182,
-      "property_value": 1820,
-      "spreadability": 67
+      "catchability": 3
     },
     {
       "x": 3,
       "y": 4,
       "pop": 40,
-      "property_value": 400,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 4,
       "y": 3,
       "pop": 51,
-      "property_value": 510,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 4,
       "y": 12,
       "pop": 83,
-      "property_value": 830,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 8,
       "y": 12,
       "pop": 211,
-      "property_value": 2110,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 10,
       "y": 9,
       "pop": 231,
-      "property_value": 2310,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 1,
       "y": 6,
       "pop": 29,
-      "property_value": 290,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 11,
       "y": 8,
       "pop": 225,
-      "property_value": 2250,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 0,
       "y": 8,
       "pop": 20,
-      "property_value": 200,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 15,
       "y": 8,
       "pop": 85,
-      "property_value": 850,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 6,
       "y": 5,
       "pop": 126,
-      "property_value": 1260,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 6,
       "y": 14,
       "pop": 79,
-      "property_value": 790,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 7,
       "y": 13,
       "pop": 130,
-      "property_value": 1300,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 4,
       "y": 5,
       "pop": 88,
-      "property_value": 880,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 9,
       "y": 4,
       "pop": 126,
-      "property_value": 1260,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 5,
       "y": 15,
       "pop": 56,
-      "property_value": 560,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 8,
       "y": 14,
       "pop": 126,
-      "property_value": 1260,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 10,
       "y": 11,
       "pop": 245,
-      "property_value": 2450,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 9,
       "y": 13,
       "pop": 171,
-      "property_value": 1710,
-      "spreadability": 66
+      "catchability": 3
     },
     {
       "x": 11,
       "y": 10,
       "pop": 246,
-      "property_value": 2460,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 2,
       "y": 7,
       "pop": 54,
-      "property_value": 540,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 13,
       "y": 13,
       "pop": 94,
-      "property_value": 940,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 6,
       "y": 7,
       "pop": 186,
-      "property_value": 1860,
-      "spreadability": 66
+      "catchability": 3
     },
     {
       "x": 7,
       "y": 6,
       "pop": 174,
-      "property_value": 1740,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 12,
       "y": 11,
       "pop": 149,
-      "property_value": 1490,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 4,
       "y": 7,
       "pop": 95,
-      "property_value": 950,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 4,
       "y": 16,
       "pop": 28,
-      "property_value": 280,
-      "spreadability": 55
+      "catchability": 3
     },
     {
       "x": 5,
       "y": 8,
       "pop": 154,
-      "property_value": 1540,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 8,
       "y": 7,
       "pop": 226,
-      "property_value": 2260,
-      "spreadability": 68
+      "catchability": 3
     },
     {
       "x": 10,
       "y": 4,
       "pop": 114,
-      "property_value": 1140,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 9,
       "y": 6,
       "pop": 179,
-      "property_value": 1790,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 0,
       "y": 3,
       "pop": 3,
-      "property_value": 30,
-      "spreadability": 51
+      "catchability": 3
     },
     {
       "x": 1,
       "y": 1,
       "pop": 1,
-      "property_value": 10,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 10,
       "y": 13,
       "pop": 166,
-      "property_value": 1660,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 11,
       "y": 12,
       "pop": 183,
-      "property_value": 1830,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 2,
       "y": 9,
       "pop": 71,
-      "property_value": 710,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 13,
       "y": 6,
       "pop": 131,
-      "property_value": 1310,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 13,
       "y": 15,
       "pop": 53,
-      "property_value": 530,
-      "spreadability": 53
+      "catchability": 3
     },
     {
       "x": 6,
       "y": 9,
       "pop": 178,
-      "property_value": 1780,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 7,
       "y": 8,
       "pop": 219,
-      "property_value": 2190,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 26,
       "y": 21,
       "pop": 139,
-      "property_value": 1390,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 25,
       "y": 23,
       "pop": 171,
-      "property_value": 1710,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 18,
       "y": 17,
       "pop": 20,
-      "property_value": 200,
-      "spreadability": 55
+      "catchability": 3
     },
     {
       "x": 21,
       "y": 16,
       "pop": 36,
-      "property_value": 360,
-      "spreadability": 52
+      "catchability": 3
     },
     {
       "x": 16,
       "y": 29,
       "pop": 4,
-      "property_value": 40,
-      "spreadability": 53
+      "catchability": 3
     },
     {
       "x": 18,
       "y": 26,
       "pop": 53,
-      "property_value": 530,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 22,
       "y": 26,
       "pop": 150,
-      "property_value": 1500,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 25,
       "pop": 181,
-      "property_value": 1810,
-      "spreadability": 67
+      "catchability": 3
     },
     {
       "x": 28,
       "y": 21,
       "pop": 70,
-      "property_value": 700,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 19,
       "y": 18,
       "pop": 50,
-      "property_value": 500,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 17,
       "y": 30,
       "pop": 5,
-      "property_value": 50,
-      "spreadability": 50
+      "catchability": 2
     },
     {
       "x": 26,
       "y": 14,
       "pop": 3,
-      "property_value": 30,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 24,
       "y": 26,
       "pop": 116,
-      "property_value": 1160,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 26,
       "y": 23,
       "pop": 147,
-      "property_value": 1470,
-      "spreadability": 66
+      "catchability": 3
     },
     {
       "x": 25,
       "y": 25,
       "pop": 125,
-      "property_value": 1250,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 18,
       "y": 19,
       "pop": 51,
-      "property_value": 510,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 20,
       "y": 22,
       "pop": 124,
-      "property_value": 1240,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 22,
       "y": 19,
       "pop": 107,
-      "property_value": 1070,
-      "spreadability": 66
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 27,
       "pop": 116,
-      "property_value": 1160,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 26,
       "y": 16,
       "pop": 22,
-      "property_value": 220,
-      "spreadability": 53
+      "catchability": 3
     },
     {
       "x": 25,
       "y": 18,
       "pop": 65,
-      "property_value": 650,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 24,
       "y": 28,
       "pop": 67,
-      "property_value": 670,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 26,
       "y": 25,
       "pop": 138,
-      "property_value": 1380,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 16,
       "y": 24,
       "pop": 30,
-      "property_value": 300,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 18,
       "y": 21,
       "pop": 74,
-      "property_value": 740,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 18,
       "y": 30,
       "pop": 10,
-      "property_value": 100,
-      "spreadability": 53
+      "catchability": 3
     },
     {
       "x": 20,
       "y": 24,
       "pop": 125,
-      "property_value": 1250,
-      "spreadability": 67
+      "catchability": 3
     },
     {
       "x": 22,
       "y": 21,
       "pop": 196,
-      "property_value": 1960,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 20,
       "pop": 127,
-      "property_value": 1270,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 17,
       "y": 16,
       "pop": 5,
-      "property_value": 50,
-      "spreadability": 53
+      "catchability": 3
     },
     {
       "x": 22,
       "y": 30,
       "pop": 40,
-      "property_value": 400,
-      "spreadability": 54
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 29,
       "pop": 66,
-      "property_value": 660,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 24,
       "y": 21,
       "pop": 157,
-      "property_value": 1570,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 26,
       "y": 18,
       "pop": 70,
-      "property_value": 700,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 16,
       "y": 17,
       "pop": 5,
-      "property_value": 50,
-      "spreadability": 50
+      "catchability": 2
     },
     {
       "x": 24,
       "y": 30,
       "pop": 30,
-      "property_value": 300,
-      "spreadability": 54
+      "catchability": 3
     },
     {
       "x": 25,
       "y": 29,
       "pop": 57,
-      "property_value": 570,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 20,
       "y": 17,
       "pop": 38,
-      "property_value": 380,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 20,
       "y": 26,
       "pop": 93,
-      "property_value": 930,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 22,
       "y": 23,
       "pop": 222,
-      "property_value": 2220,
-      "spreadability": 67
+      "catchability": 3
     },
     {
       "x": 21,
       "y": 25,
       "pop": 172,
-      "property_value": 1720,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 22,
       "pop": 189,
-      "property_value": 1890,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 31,
       "pop": 21,
-      "property_value": 210,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 27,
       "y": 22,
       "pop": 102,
-      "property_value": 1020,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 19,
       "y": 27,
       "pop": 73,
-      "property_value": 730,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 26,
       "y": 20,
       "pop": 114,
-      "property_value": 1140,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 25,
       "y": 22,
       "pop": 177,
-      "property_value": 1770,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 16,
       "y": 19,
       "pop": 16,
-      "property_value": 160,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 18,
       "y": 16,
       "pop": 10,
-      "property_value": 100,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 29,
       "y": 22,
       "pop": 60,
-      "property_value": 600,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 20,
       "y": 19,
       "pop": 85,
-      "property_value": 850,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 22,
       "y": 16,
       "pop": 33,
-      "property_value": 330,
-      "spreadability": 53
+      "catchability": 3
     },
     {
       "x": 21,
       "y": 18,
       "pop": 76,
-      "property_value": 760,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 20,
       "y": 28,
       "pop": 56,
-      "property_value": 560,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 22,
       "y": 25,
       "pop": 161,
-      "property_value": 1610,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 21,
       "y": 27,
       "pop": 110,
-      "property_value": 1100,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 24,
       "pop": 209,
-      "property_value": 2090,
-      "spreadability": 69
+      "catchability": 3
     },
     {
       "x": 27,
       "y": 15,
       "pop": 7,
-      "property_value": 70,
-      "spreadability": 52
+      "catchability": 3
     },
     {
       "x": 19,
       "y": 20,
       "pop": 96,
-      "property_value": 960,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 19,
       "y": 29,
       "pop": 29,
-      "property_value": 290,
-      "spreadability": 55
+      "catchability": 3
     },
     {
       "x": 24,
       "y": 25,
       "pop": 175,
-      "property_value": 1750,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 16,
       "y": 21,
       "pop": 31,
-      "property_value": 310,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 16,
       "y": 30,
       "pop": 1,
-      "property_value": 10,
-      "spreadability": 55
+      "catchability": 3
     },
     {
       "x": 29,
       "y": 24,
       "pop": 57,
-      "property_value": 570,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 20,
       "y": 21,
       "pop": 125,
-      "property_value": 1250,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 21,
       "y": 20,
       "pop": 117,
-      "property_value": 1170,
-      "spreadability": 67
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 17,
       "pop": 66,
-      "property_value": 660,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 22,
       "y": 27,
       "pop": 94,
-      "property_value": 940,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 17,
       "y": 25,
       "pop": 49,
-      "property_value": 490,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 30,
       "y": 22,
       "pop": 29,
-      "property_value": 290,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 24,
       "y": 18,
       "pop": 81,
-      "property_value": 810,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 25,
       "y": 26,
       "pop": 128,
-      "property_value": 1280,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 16,
       "y": 23,
       "pop": 40,
-      "property_value": 400,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 22,
       "y": 20,
       "pop": 130,
-      "property_value": 1300,
-      "spreadability": 67
+      "catchability": 3
     },
     {
       "x": 21,
       "y": 22,
       "pop": 164,
-      "property_value": 1640,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 28,
       "pop": 81,
-      "property_value": 810,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 14,
       "y": 25,
       "pop": 4,
-      "property_value": 40,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 27,
       "y": 19,
       "pop": 57,
-      "property_value": 570,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 17,
       "y": 18,
       "pop": 20,
-      "property_value": 200,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 17,
       "y": 27,
       "pop": 32,
-      "property_value": 320,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 19,
       "y": 24,
       "pop": 112,
-      "property_value": 1120,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 30,
       "y": 24,
       "pop": 36,
-      "property_value": 360,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 25,
       "y": 19,
       "pop": 107,
-      "property_value": 1070,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 25,
       "y": 28,
       "pop": 64,
-      "property_value": 640,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 20,
       "y": 16,
       "pop": 27,
-      "property_value": 270,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 21,
       "y": 15,
       "pop": 18,
-      "property_value": 180,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 15,
       "y": 29,
       "pop": 1,
-      "property_value": 10,
-      "spreadability": 51
+      "catchability": 3
     },
     {
       "x": 20,
       "y": 25,
       "pop": 112,
-      "property_value": 1120,
-      "spreadability": 66
+      "catchability": 3
     },
     {
       "x": 18,
       "y": 25,
       "pop": 85,
-      "property_value": 850,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 21,
       "y": 24,
       "pop": 185,
-      "property_value": 1850,
-      "spreadability": 68
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 21,
       "pop": 179,
-      "property_value": 1790,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 31,
       "y": 25,
       "pop": 14,
-      "property_value": 140,
-      "spreadability": 55
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 30,
       "pop": 32,
-      "property_value": 320,
-      "spreadability": 55
+      "catchability": 3
     },
     {
       "x": 27,
       "y": 21,
       "pop": 108,
-      "property_value": 1080,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 28,
       "y": 20,
       "pop": 53,
-      "property_value": 530,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 17,
       "y": 20,
       "pop": 35,
-      "property_value": 350,
-      "spreadability": 55
+      "catchability": 3
     },
     {
       "x": 17,
       "y": 29,
       "pop": 11,
-      "property_value": 110,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 19,
       "y": 26,
       "pop": 80,
-      "property_value": 800,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 25,
       "y": 21,
       "pop": 148,
-      "property_value": 1480,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 26,
       "y": 22,
       "pop": 114,
-      "property_value": 1140,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 20,
       "y": 18,
       "pop": 53,
-      "property_value": 530,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 18,
       "y": 27,
       "pop": 55,
-      "property_value": 550,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 23,
       "pop": 259,
-      "property_value": 2590,
-      "spreadability": 68
+      "catchability": 3
     },
     {
       "x": 27,
       "y": 14,
       "pop": 1,
-      "property_value": 10,
-      "spreadability": 53
+      "catchability": 3
     },
     {
       "x": 27,
       "y": 23,
       "pop": 119,
-      "property_value": 1190,
-      "spreadability": 55
+      "catchability": 3
     },
     {
       "x": 28,
       "y": 22,
       "pop": 79,
-      "property_value": 790,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 19,
       "y": 19,
       "pop": 66,
-      "property_value": 660,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 17,
       "y": 22,
       "pop": 63,
-      "property_value": 630,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 24,
       "y": 27,
       "pop": 92,
-      "property_value": 920,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 26,
       "y": 24,
       "pop": 118,
-      "property_value": 1180,
-      "spreadability": 64
+      "catchability": 3
     },
     {
       "x": 29,
       "y": 23,
       "pop": 67,
-      "property_value": 670,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 15,
       "y": 24,
       "pop": 17,
-      "property_value": 170,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 21,
       "y": 19,
       "pop": 96,
-      "property_value": 960,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 16,
       "pop": 39,
-      "property_value": 390,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 18,
       "y": 29,
       "pop": 21,
-      "property_value": 210,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 21,
       "y": 28,
       "pop": 63,
-      "property_value": 630,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 27,
       "y": 16,
       "pop": 17,
-      "property_value": 170,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 17,
       "y": 15,
       "pop": 1,
-      "property_value": 10,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 22,
       "y": 29,
       "pop": 49,
-      "property_value": 490,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 27,
       "y": 25,
       "pop": 107,
-      "property_value": 1070,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 28,
       "y": 24,
       "pop": 93,
-      "property_value": 930,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 24,
       "y": 20,
       "pop": 113,
-      "property_value": 1130,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 26,
       "y": 17,
       "pop": 39,
-      "property_value": 390,
-      "spreadability": 56
+      "catchability": 3
     },
     {
       "x": 24,
       "y": 29,
       "pop": 52,
-      "property_value": 520,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 29,
       "y": 25,
       "pop": 48,
-      "property_value": 480,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 21,
       "y": 21,
       "pop": 128,
-      "property_value": 1280,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 23,
       "y": 18,
       "pop": 88,
-      "property_value": 880,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 22,
       "y": 22,
       "pop": 189,
-      "property_value": 1890,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 17,
       "y": 26,
       "pop": 49,
-      "property_value": 490,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 24,
       "y": 22,
       "pop": 163,
-      "property_value": 1630,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 18,
       "y": 15,
       "pop": 2,
-      "property_value": 20,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 15,
       "y": 28,
       "pop": 3,
-      "property_value": 30,
-      "spreadability": 53
+      "catchability": 3
     },
     {
       "x": 25,
       "y": 30,
       "pop": 35,
-      "property_value": 350,
-      "spreadability": 62
+      "catchability": 3
     },
     {
       "x": 16,
       "y": 27,
       "pop": 20,
-      "property_value": 200,
-      "spreadability": 59
+      "catchability": 3
     },
     {
       "x": 18,
       "y": 24,
       "pop": 93,
-      "property_value": 930,
-      "spreadability": 63
+      "catchability": 3
     },
     {
       "x": 21,
       "y": 23,
       "pop": 201,
-      "property_value": 2010,
-      "spreadability": 65
+      "catchability": 3
     },
     {
       "x": 26,
       "y": 28,
       "pop": 52,
-      "property_value": 520,
-      "spreadability": 54
+      "catchability": 3
     },
     {
       "x": 20,
       "y": 27,
       "pop": 88,
-      "property_value": 880,
-      "spreadability": 57
+      "catchability": 3
     },
     {
       "x": 22,
       "y": 24,
       "pop": 190,
-      "property_value": 1900,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 27,
       "y": 20,
       "pop": 74,
-      "property_value": 740,
-      "spreadability": 58
+      "catchability": 3
     },
     {
       "x": 17,
       "y": 19,
       "pop": 37,
-      "property_value": 370,
-      "spreadability": 53
+      "catchability": 3
     },
     {
       "x": 19,
       "y": 16,
       "pop": 19,
-      "property_value": 190,
-      "spreadability": 52
+      "catchability": 3
     },
     {
       "x": 19,
       "y": 25,
       "pop": 90,
-      "property_value": 900,
-      "spreadability": 60
+      "catchability": 3
     },
     {
       "x": 30,
       "y": 25,
       "pop": 31,
-      "property_value": 310,
-      "spreadability": 61
+      "catchability": 3
     },
     {
       "x": 24,
       "y": 24,
       "pop": 175,
-      "property_value": 1750,
-      "spreadability": 64
+      "catchability": 3
     }
   ],
-  "baseline_donothing": 5527538,
-  "baseline_greedy": 5602404
+  "baseline_donothing": 3785894,
+  "baseline_greedy": 3760362
 }

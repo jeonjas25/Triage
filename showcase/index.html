@@ -461,7 +461,7 @@ ctx.scale(dpr, dpr);
 
 // ── Color helpers ─────────────────────────────────────────────────────────────
 function fireFill(intensity) {
-  const t = Math.min(1, intensity / 100);
+  const t = Math.min(1, intensity / 5);
   return `rgb(255,${Math.round(136 * (1 - t))},0)`;
 }
 
@@ -859,14 +859,12 @@ canvas.addEventListener('mousemove', e => {
   if (!cell) { tooltip.style.display = 'none'; return; }
 
   const isFire = cell.fire || cell.on_fire;
-  const spread = cell.spread ?? cell.spreadability;
-  const prop   = cell.prop   ?? cell.property_remaining;
+  const catchability = cell.catch ?? cell.catchability;
   tooltip.innerHTML = [
     `<span style="color:#6688cc">(${gx}, ${gy})</span>`,
     `pop: <b>${cell.pop ?? 0}</b>`,
     `fire: <b style="color:${isFire ? '#ff7722' : '#44cc66'}">${isFire ? `yes &mdash; intensity ${cell.intensity}` : 'no'}</b>`,
-    spread != null ? `spread: <b>${spread}</b>` : '',
-    prop   != null ? `prop: <b>${prop.toLocaleString()}</b>` : '',
+    catchability != null ? `catch: <b>${catchability}</b>` : '',
     everOnFire.has(key) && !isFire ? `<span style="color:#885533">burned out</span>` : '',
   ].filter(Boolean).join('<br>');
 
