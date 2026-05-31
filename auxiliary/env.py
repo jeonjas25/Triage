@@ -22,21 +22,21 @@ _SCENARIOS_DIR = Path(__file__).parent.parent / "scenarios"
 _BUILTIN_DEFAULT: dict[str, Any] = {
     "name": "two_towns",
     "grid_width": 14, "grid_height": 14, "max_turns": 20, "actions_per_crew": 4,
-    "crews": [{"id": 0, "size": 10, "cell": [7, 0]}, {"id": 1, "size": 10, "cell": [7, 13]}],
+    "crews": [{"id": 0, "cell": [7, 0]}, {"id": 1, "cell": [7, 13]}],
     "fire_clusters": [
-        {"cells": [[3, 2], [2, 3], [3, 3]], "intensity": 40},
-        {"cells": [[10, 11], [11, 10], [10, 10]], "intensity": 40},
+        {"cells": [[3, 2], [2, 3], [3, 3]], "intensity": 3},
+        {"cells": [[10, 11], [11, 10], [10, 10]], "intensity": 3},
     ],
     "cells": [
-        {"x": 2,  "y": 2,  "pop": 300, "property_value": 3000, "spreadability": 65},
-        {"x": 1,  "y": 2,  "pop": 50,  "property_value": 500,  "spreadability": 60},
-        {"x": 2,  "y": 1,  "pop": 50,  "property_value": 500,  "spreadability": 60},
-        {"x": 11, "y": 11, "pop": 250, "property_value": 2500, "spreadability": 65},
-        {"x": 12, "y": 11, "pop": 40,  "property_value": 400,  "spreadability": 60},
-        {"x": 11, "y": 12, "pop": 40,  "property_value": 400,  "spreadability": 60},
+        {"x": 2,  "y": 2,  "pop": 300, "catchability": 3},
+        {"x": 1,  "y": 2,  "pop": 50,  "catchability": 3},
+        {"x": 2,  "y": 1,  "pop": 50,  "catchability": 3},
+        {"x": 11, "y": 11, "pop": 250, "catchability": 3},
+        {"x": 12, "y": 11, "pop": 40,  "catchability": 3},
+        {"x": 11, "y": 12, "pop": 40,  "catchability": 3},
     ],
-    "baseline_donothing": -582038,
-    "baseline_greedy": -464967,
+    "baseline_donothing": 0,
+    "baseline_greedy": 1,
 }
 
 
@@ -71,7 +71,6 @@ class TriageEnv(BaseEnv):
         self._max_turns: int = 20
         self._running_total: int = 0
         self._casualties: int = 0
-        self._property_lost: int = 0
         self._cells_ignited: int = 0
         self._illegal: int = 0
         self._baseline_donothing: int = 0
@@ -93,7 +92,6 @@ class TriageEnv(BaseEnv):
         self._crews = [
             Crew(
                 id=c["id"],
-                size=c["size"],
                 cell=list(c["cell"]),
                 actions_per_turn=actions_per_crew,
             )
@@ -110,7 +108,7 @@ class TriageEnv(BaseEnv):
                     cell = self._grid.get(cx, cy)
                     if cell:
                         cell.on_fire = True
-                        cell.intensity = cluster.get("intensity", 20)
+                        cell.intensity = cluster.get("intensity", 3)
             else:
                 self._pending_clusters.append((ignite_at, cluster))
 
@@ -124,7 +122,6 @@ class TriageEnv(BaseEnv):
         self._turn = 0
         self._running_total = 0
         self._casualties = 0
-        self._property_lost = 0
         self._cells_ignited = 0
         self._illegal = 0
 
@@ -141,7 +138,7 @@ class TriageEnv(BaseEnv):
                     cell = self._grid.get(cx, cy)
                     if cell and not cell.on_fire:
                         cell.on_fire = True
-                        cell.intensity = cluster.get("intensity", 20)
+                        cell.intensity = cluster.get("intensity", 3)
                         key = (cx, cy)
                         self._active_timers[key] = self._burn_lifespans.get(key, 15)
             else:
@@ -154,17 +151,14 @@ class TriageEnv(BaseEnv):
         self._illegal += illegal
 
         schedule_t = self._schedule[self._turn]
-        newly_ignited, prop_lost = self._fire.step(
+        newly_ignited = self._fire.step(
             self._grid, schedule_t, self._active_timers, self._burn_lifespans
         )
         casualties = compute_tick_casualties(self._grid)
-        delta = compute_tick_score_delta(
-            self._grid, casualties, newly_ignited, prop_lost
-        )
+        delta = compute_tick_score_delta(self._grid, casualties, newly_ignited)
 
         self._running_total += delta
         self._casualties += casualties
-        self._property_lost += prop_lost
         self._cells_ignited += newly_ignited
         self._turn += 1
 
@@ -184,7 +178,6 @@ class TriageEnv(BaseEnv):
             info = {
                 "norm_score": round(norm, 4),
                 "lives_lost": self._casualties,
-                "property_lost": self._property_lost,
                 "cells_burned": self._cells_ignited,
                 "illegal_actions": self._illegal,
             }
@@ -246,6 +239,6 @@ class TriageEnv(BaseEnv):
         for _ in range(max_turns):
             schedule.append({
                 "ignition_rolls": {(c.x, c.y): rng.random() for c in grid.cells.values()},
-                "intensity_growth": {(c.x, c.y): rng.randint(2, 8) for c in grid.cells.values()},
+                "intensity_growth": {(c.x, c.y): rng.randint(0, 1) for c in grid.cells.values()},
             })
         return schedule, burn_lifespans

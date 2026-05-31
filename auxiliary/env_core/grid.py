@@ -11,16 +11,9 @@ class Cell:
     x: int
     y: int
     pop: int = 0
-    property_value: int = 0
-    spreadability: int = 50
+    catchability: int = 3   # how easily an unlit square catches fire, 1-5
     on_fire: bool = False
-    intensity: int = 0
-    property_remaining: int = 0
-    peak_intensity: int = 0
-
-    def __post_init__(self) -> None:
-        if self.property_remaining == 0:
-            self.property_remaining = self.property_value
+    intensity: int = 0      # fire intensity, 1-5 while burning (0 = not on fire)
 
 
 @dataclass
@@ -69,8 +62,6 @@ def load_scenario(config: dict[str, Any]) -> tuple[Grid, list[dict[str, Any]]]:
         if cell is None:
             continue
         cell.pop = cp.get("pop", 0)
-        cell.property_value = cp.get("property_value", 0)
-        cell.property_remaining = cell.property_value
-        cell.spreadability = cp.get("spreadability", 50)
+        cell.catchability = cp.get("catchability", 3)
 
     return grid, config.get("fire_clusters", [])

@@ -16,21 +16,21 @@ The core tension: fire spreads exponentially, crews are scarce, and optimal reso
 
 | Scenario | Grid | Turns | Crews | Challenge |
 |---|---|---|---|---|
-| `two_towns` | 14×14 | 20 | 2 × size 10 | Symmetric opening |
-| `three_fronts` | 18×18 | 25 | 2 × size 10 | Three simultaneous fronts |
-| `squeeze` | 16×16 | 22 | 2 × size 7 | Pinched terrain, limited AP |
-| `asymmetric_stakes` | 14×14 | 20 | 2 × size 10 | Unequal population stakes |
-| `racing_fronts` | 16×12 | 18 | 2 × size 9 | Fast-moving converging fires |
-| `delayed_storm` | 18×18 | 25 | 2 × size 10 | Hidden third fire ignites at turn 6 |
-| `one_crew` | 12×12 | 20 | 1 × size 15 | Single large crew, all fronts |
-| `three_unequal` | 18×18 | 22 | 2 × size 10 | Skewed population distribution |
-| `city_siege` | 16×18 | 22 | 2 × size 10 | Dense urban center under threat |
-| `corridor` | 20×8 | 20 | 2 × size 10 | Linear corridor, fires at both ends |
-| `crescendo` | 14×14 | 18 | 2 × size 10 | Weak fires, 85% spreadability — delay costs everything |
-| `four_villages` | 18×18 | 22 | 2 × size 10 | Four villages; crews can only save two |
-| `small_crews` | 16×16 | 25 | 3 × size 5 | Three marginal crews against three fronts |
-| `heartland` | 20×20 | 25 | 2 × size 12 | 800-person metro, two converging fires |
-| `last_stand` | 12×12 | 15 | 2 × size 12 | Intensity-60 fires, 15 turns, no margin |
+| `two_towns` | 32×32 | 20 | 4 | Symmetric opening |
+| `three_fronts` | 34×34 | 25 | 4 | Three simultaneous fronts |
+| `squeeze` | 32×32 | 22 | 4 | Pinched terrain, limited AP |
+| `asymmetric_stakes` | 30×30 | 20 | 4 | Unequal population stakes |
+| `racing_fronts` | 36×28 | 18 | 4 | Fast-moving converging fires |
+| `delayed_storm` | 36×36 | 25 | 4 | Hidden third fire ignites at turn 6 |
+| `one_crew` | 28×28 | 20 | 3 | Single crew, all fronts |
+| `three_unequal` | 36×36 | 22 | 4 | Skewed population distribution |
+| `city_siege` | 30×36 | 22 | 4 | Dense urban center under threat |
+| `corridor` | 44×18 | 20 | 4 | Linear corridor, fires at both ends |
+| `crescendo` | 30×30 | 18 | 4 | Weak fires, high-catchability terrain — delay costs everything |
+| `four_villages` | 36×36 | 22 | 4 | Four villages; crews can only save two |
+| `small_crews` | 34×34 | 25 | 5 | Marginal crews against three fronts |
+| `heartland` | 36×36 | 25 | 4 | 800-person metro, two converging fires |
+| `last_stand` | 28×28 | 15 | 4 | High-intensity fires, 15 turns, no margin |
 
 ---
 
@@ -46,7 +46,6 @@ The core tension: fire spreads exponentially, crews are scarce, and optimal reso
 | Burning cell | −5 |
 | Casualty (death) | −100 |
 | Newly ignited cell | −1,000 |
-| Property destroyed | −1 per unit |
 
 **Terminal normalization:**
 
@@ -75,12 +74,14 @@ Each turn the agent submits a list of commands — up to `actions_per_crew` per 
 }
 ```
 
+Every crew is a single unit — actions have a fixed effect (no crew-size scaling):
+
 | Command | AP cost | Effect |
 |---|---|---|
 | `move` | 1 | Move crew to adjacent cell `[x, y]` via `"to"` |
-| `suppress` | 1 | Reduce intensity of crew's current cell by `crew_size × 3`; extinguishes at 0 |
-| `prep` | 1 | Reduce spreadability of crew's current cell by `crew_size × 3` |
-| `evacuate` | 1 | Carry up to `crew_size × 5` people from current cell to adjacent cell via `"to"` |
+| `suppress` | 1 | Reduce intensity of crew's current cell by `2` (1–5 scale); extinguishes at 0 |
+| `prep` | 1 | Reduce catchability of crew's current cell by `1` (1–5 scale) |
+| `evacuate` | 1 | Carry up to `50` people from current cell to adjacent cell via `"to"` |
 
 ---
 
@@ -96,13 +97,13 @@ The agent receives a **partial observation** — only cells that are on fire, ad
   "grid_height": 14,
   "score": -12340,
   "crews": [
-    {"id": 0, "cell": [3, 4], "size": 10, "actions_remaining": 4}
+    {"id": 0, "cell": [3, 4], "actions_remaining": 4}
   ],
   "cells": [
     {
       "x": 3, "y": 3,
-      "pop": 50, "on_fire": true, "intensity": 62,
-      "spreadability": 65, "property_value": 500, "property_remaining": 320
+      "pop": 50, "on_fire": true, "intensity": 3,
+      "catchability": 4
     }
   ]
 }

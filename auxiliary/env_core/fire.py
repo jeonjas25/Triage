@@ -15,7 +15,7 @@ class FireModel:
         schedule_t: dict,
         active_timers: dict[tuple[int, int], int],
         burn_lifespans: dict[tuple[int, int], int],
-    ) -> tuple[int, int]:
+    ) -> int:
         """
         Advance every burning cell one tick.
         active_timers is mutated in place.
@@ -29,7 +29,6 @@ class FireModel:
         how many neighbors are burning or in what order they are visited.
         """
         newly_ignited = 0
-        property_lost = 0
 
         burning = [c for c in grid.cells.values() if c.on_fire]
 
@@ -81,7 +80,7 @@ class FireModel:
                     active_timers[key] = burn_lifespans.get(key, 15)
                     newly_ignited += 1
 
-        return newly_ignited, property_lost
+        return newly_ignited
 
     def intensity(self, cell) -> float:
-        return cell.intensity / 100.0
+        return cell.intensity / 5.0

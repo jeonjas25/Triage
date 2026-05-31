@@ -3,17 +3,20 @@ Recompute do-nothing and greedy baseline running totals for all scenario JSON fi
 Writes baseline_donothing and baseline_greedy back into each scenario file.
 
 Usage:
-    python compute_baselines.py
+    python compute_baselines.py            # print baselines for every scenario
+    python compute_baselines.py --write    # also write them into scenarios/*.json
 """
 
 from __future__ import annotations
 
 import json
+import json
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent / "auxiliary"))
-sys.path.insert(0, str(Path(__file__).parent))
+ROOT = Path(__file__).parent
+sys.path.insert(0, str(ROOT / "auxiliary"))
+sys.path.insert(0, str(ROOT))
 
 from env import TriageEnv
 from baselines.agents import DoNothingAgent, GreedyAgent
@@ -53,6 +56,7 @@ def main() -> None:
             dn = run_raw(scenario, DoNothingAgent(), seed)
             gr = run_raw(scenario, GreedyAgent(), seed)
             spread = gr - dn
+            mark = "OK" if spread > 0 else "WARN(greedy<=donothing)"
             mark = "OK" if spread > 0 else "WARN(greedy<=donothing)"
             print(f"  seed={seed}  do_nothing={dn:>12,}  greedy={gr:>12,}  spread={spread:>10,}  {mark}")
             seed_results[seed] = {"donothing": dn, "greedy": gr}
