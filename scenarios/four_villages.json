@@ -4,7 +4,7 @@
   "grid_width": 36,
   "grid_height": 36,
   "max_turns": 22,
-  "actions_per_crew": 4,
+  "actions_per_crew": 6,
   "crews": [
     {
       "id": 0,
@@ -20,6 +20,22 @@
       "cell": [
         18,
         17
+      ]
+    },
+    {
+      "id": 2,
+      "size": 10,
+      "cell": [
+        9,
+        9
+      ]
+    },
+    {
+      "id": 3,
+      "size": 10,
+      "cell": [
+        27,
+        9
       ]
     }
   ],
@@ -2210,5 +2226,5 @@
     }
   ],
   "baseline_donothing": 3517616,
-  "baseline_greedy": 3592393
+  "baseline_greedy": 3942048
 }
